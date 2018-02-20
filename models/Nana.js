@@ -42,6 +42,9 @@ module.exports = function(sequelize, DataTypes) {
       cuisineexpertise: {
         type: DataTypes.ARRAY(DataTypes.STRING)
       },
+      costperhour: {
+        type: DataTypes.DECIMAL
+      },
       backgroundcheck: {
         type: BOOLEAN,
         defaultValue: FALSE
