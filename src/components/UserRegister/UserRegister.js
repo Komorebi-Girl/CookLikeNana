@@ -3,28 +3,32 @@ import "./UserRegister.css";
 
 const UserRegister = props => (
 	<div className="card">
-			<h5 className="card-header">User Register</h5>
+			<h5 className="card-header">User Registration</h5>
 			<div className="card-body">
 				<form>
-				  <div className="form-group">
+				<div className="row">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">Full Name</label>
     				<input type="text" className="form-control" id="fullname" name="fullname"></input>
 				  </div>
 
-				  <div className="form-group">
+				  <div className="form-group col-md-6">
 				    <label for="exampleInputEmail1">Email</label>
 				    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
 				  </div>
+				</div>
 
-				  <div class="form-group">
+				<div className="row">
+				  <div class="form-group col-md-6">
 				    <label for="exampleInputPassword1">Password</label>
 				    <input type="password" class="form-control" id="password"></input>
 				  </div>
 
-				  <div className="form-group">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">Address</label>
     				<input type="text" className="form-control" id="address" name="address"></input>
 				  </div>
+				</div>
 
 				  <div className="form-group">
 				    <label for="exampleFormControlSelect1">Link to Photo (Optional)</label>
