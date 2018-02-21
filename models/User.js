@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
       userid: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
       },
@@ -24,15 +24,32 @@ module.exports = function(sequelize, DataTypes) {
       profileimage: {
         type: DataTypes.STRING
       },
-      location: {
+      address: {
         type: DataTypes.STRING,
         allowNull:false
       },
       bio: {
         type: DataTypes.TEXT
       },
-      cuisinepref: {
-        type: DataTypes.ARRAY(DataTypes.STRING)
+      italiancuisine: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      },
+      vegetarianvegan: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      },
+      southerncuisine: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      },
+      baking: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      },
+      hispanic: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
       }
     });
     return User;

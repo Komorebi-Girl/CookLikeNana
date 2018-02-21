@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   var Booking = sequelize.define("Booking", {
     bookingid: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },  
-    nanaid: DataTypes.INTERGER,
-    userid: DataTypes.INTERGER,
+    nanaid: DataTypes.INTEGER,
+    userid: DataTypes.INTEGER,
     day: DataTypes.STRING,
     time: DataTypes.STRING, 
     status: DataTypes.STRING     

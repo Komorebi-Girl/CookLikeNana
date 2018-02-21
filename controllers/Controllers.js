@@ -1,55 +1,70 @@
-const express = require("express");
-const router = express.Router();
+// const express = require("express");
+// const router = express.Router();
 
 const db = require("../models");
 
-router.get("/searchnana", function(req, res) {
-    db.Nana.selectAll(function(data) {
-        const hbsObject = {
-        nanas: data
-        };
-        res.render("searchnana", hbsObject);
-    });
-});
+module.exports = {
+    findAll: function(req, res) {
+    //   db.Nana
+    //     .find(req.query)
+    //     .sort({ date: -1 })
+        db.Nana.selectAll(function(data) {
+            const hbsObject = {
+            nanas: data
+            };
+        })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    }    
+  };
 
-router.post("/signupnana", function(req, res) {
-    db.Nana.create(
-    {
-        firstname : req.body.firstname,
-        lastname : req.body.lastname,
-        email : req.body.email,
-        password : req.body.password,
-        profileimage : req.body.profileimage,
-        location : req.body.location,
-        bio : req.body.bio,
-        youtubelink : req.body.youtubelink,
-        cuisineexpertise : req.body.expertincuisines
-    })
-    .then(function(dbUser) {
-        res.redirect(307, "/nana");
-    }).catch(function(err) {
-        console.log(err);
-        res.json(err);
-    });
-});
+// router.get("/nanas", function(req, res) {
+//     db.Nana.selectAll(function(data) {
+//         const hbsObject = {
+//         nanas: data
+//         };
+//         res.render("searchnana", hbsObject);
+//     });
+// });
 
-router.post("/signupuser", function(req, res) {
-    db.User.create(
-    {
-        fullname : req.body.fullname,
-        email : req.body.email,
-        password : req.body.password,
-        profileimage : req.body.profileimage,
-        location : req.body.location,
-        bio : req.body.bio,
-        cuisinepref : req.body.cuisinepref
-    })
-    .then(function(dbUser) {
-        res.redirect(307, "/user");
-    }).catch(function(err) {
-        console.log(err);
-        res.json(err);
-    });
-});
+// router.post("/signupnana", function(req, res) {
+//     db.Nana.create(
+//     {
+//         firstname : req.body.firstname,
+//         lastname : req.body.lastname,
+//         email : req.body.email,
+//         password : req.body.password,
+//         profileimage : req.body.profileimage,
+//         location : req.body.location,
+//         bio : req.body.bio,
+//         youtubelink : req.body.youtubelink,
+//         cuisineexpertise : req.body.expertincuisines
+//     })
+//     .then(function(dbUser) {
+//         res.redirect(307, "/nana");
+//     }).catch(function(err) {
+//         console.log(err);
+//         res.json(err);
+//     });
+// });
 
-module.exports = router;
+// router.post("/signupuser", function(req, res) {
+//     db.User.create(
+//     {
+//         fullname : req.body.fullname,
+//         email : req.body.email,
+//         password : req.body.password,
+//         profileimage : req.body.profileimage,
+//         location : req.body.location,
+//         bio : req.body.bio,
+//         cuisinepref : req.body.cuisinepref
+//     })
+//     .then(function(dbUser) {
+//         res.redirect(307, "/user");
+//     }).catch(function(err) {
+//         console.log(err);
+//         res.json(err);
+//     });
+// });
+
+// module.exports = router;
