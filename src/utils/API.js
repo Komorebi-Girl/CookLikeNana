@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export default {
-
+  signUp: function(eaddress, pass){
+    return axios.post("/api/signup", {email:eaddress, password:pass});
+  },
   getNanas: function() {
     return axios.get("/api/nanas");
   },

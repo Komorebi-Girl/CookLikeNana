@@ -2,18 +2,12 @@
 // const router = express.Router();
 
 const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = {
     findAll: function(req, res) {
-    //   db.Nana
-    //     .find(req.query)
-    //     .sort({ date: -1 })
-        db.Nana.selectAll(function(data) {
-            const hbsObject = {
-            nanas: data
-            };
-        })
-        .then(dbModel => res.json(dbModel))
+        db.Nana.findAll({})
+        .then(Nanas => res.json(Nanas))
         .catch(err => res.status(422).json(err));
     }    
   };
