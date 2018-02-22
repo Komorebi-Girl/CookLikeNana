@@ -20,8 +20,8 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/api-routes.js")(app);
-// app.use(routes);
+// require("./routes/api-routes.js")(app);
+app.use(routes);
 
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {

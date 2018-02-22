@@ -1,10 +1,13 @@
 const router = require("express").Router();
-const nanaController = require("../../controllers/Controllers");
+const Controller = require("../../controllers/Controllers");
 
 router.route("/nanas")
-  .post(nanaController.findAll);
+  .post(Controller.findAll);
 
 router.route("/nana")
-  .post(nanaController.create);
+  .post(Controller.createNana);
+
+router.route("/user")
+  .post(Controller.createUser);
 
 module.exports = router;

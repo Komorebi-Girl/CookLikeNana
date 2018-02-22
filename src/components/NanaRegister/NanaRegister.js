@@ -42,7 +42,6 @@ class NanaRegister extends Component {
     })
       .then(res => {
 				console.log(res);
-				alert("Your profile has been created");
         this.setState({ nana: res.data})
       })
       .catch(err => console.log(err));

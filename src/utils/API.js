@@ -13,6 +13,11 @@ export default {
     console.log("Save Nana data");
     console.log(savedata);
     return axios.post("/api/nana", savedata);
+  },
+  saveUser: function(savedata) {
+    console.log("Save User data");
+    console.log(savedata);
+    return axios.post("/api/user", savedata);
   }
 }
 
