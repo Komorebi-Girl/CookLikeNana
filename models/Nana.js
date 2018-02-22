@@ -43,19 +43,19 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         defaultValue: false
       },
-      vegetarianvegan: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-      },
       southerncuisine: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
       },
-      baking: {
+      hispaniccuisine: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
       },
-      hispanic: {
+      vegetarianvegan: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+      },
+      baking: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
       },
