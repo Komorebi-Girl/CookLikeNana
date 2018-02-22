@@ -1,5 +1,4 @@
 const db = require("../models");
-const passport = require("../config/passport");
 
 module.exports = {
     findAll: function(req, res) {
@@ -23,6 +22,20 @@ module.exports = {
             console.log('Error in findAll: ', err);
             res.status(422).json(err);
         });
-    } 
-};
+    },
 
+    create: function(req, res) {
+        console.log("Displaying req.body");
+        console.log(req.body);
+        db.Nana.create(req.body)
+        .then(dbModel => {
+            console.log('data in create: ', dbModel)
+            res.json(dbModel);
+        })
+        .catch(err => {
+            console.log('Error in create: ', err);
+            res.status(422).json(err);
+        });
+    } 
+
+};
