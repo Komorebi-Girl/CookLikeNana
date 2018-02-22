@@ -1,4 +1,5 @@
 const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = {
     findAll: function(req, res) {
@@ -24,3 +25,4 @@ module.exports = {
         });
     } 
 };
+
