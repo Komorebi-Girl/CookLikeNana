@@ -73,53 +73,62 @@ class NanaRegister extends Component {
     return (
       <Container style={{ minHeight: "80%" }}>
         <div className="card">
-			<h5 className="card-header">Nana Register</h5>
+			<h5 className="card-header">Nana Registration</h5>
 			<div className="card-body">
 				<form>
-				  <div className="form-group">
+				<div className="row">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">First Name</label>
     				<input type="text" className="form-control" id="firstname" name="firstname" onChange={this.handleInputChange}></input>
 				  </div>
 
-				  <div className="form-group">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">Last Name</label>
     				<input type="text" className="form-control" id="lastname" name="lastname" onChange={this.handleInputChange}></input>
 				  </div>
+				</div>
 
-				  <div className="form-group">
+
+				<div className="row">
+				  <div className="form-group col-md-6">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={this.handleInputChange}></input>
+				  </div>
+
+				  <div className="form-group col-md-6">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="password" name="password" onChange={this.handleInputChange}></input>
+				  </div>
+				</div>
+
+				<div className="row">
+				  <div class="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">Location</label>
     				<input type="text" className="form-control" id="location" name="location" onChange={this.handleInputChange}></input>
 				  </div>
 
-				  <div className="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" onChange={this.handleInputChange}></input>
-				  </div>
-
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control" id="password" name="password" onChange={this.handleInputChange}></input>
-				  </div>
-
-				  <div className="form-group">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">Link to Photo</label>
-    				<input type="text" className="form-control" id="photo" name="profileimage" onChange={this.handleInputChange}></input>
+    				<input type="text" className="form-control" id="profileimage" name="profileimage" onChange={this.handleInputChange}></input>
 				  </div>
+				</div>
 
-				  <div className="form-group">
+				<div className="row">
+				  <div className="form-group col-md-6">
 				    <label for="exampleFormControlSelect1">YouTube Link</label>
     				<input type="text" className="form-control" id="youtube" name="youtubelink" onChange={this.handleInputChange}></input>
 				  </div>
 
+				  <div className="form-group col-md-6">
+				    <label for="exampleFormControlSelect1">Rate Per Hour</label>
+    				<input type="text" className="form-control" id="costperhour" name="costperhour" onChange={this.handleInputChange}></input>
+				  </div>
+				</div>
+
+
 				  <div className="form-group">
 				    <label for="exampleFormControlTextarea1">Tell Us About Yourself</label>
-				    <textarea className="form-control" id="bio" rows="3" name="bio" onChange={this.handleInputChange}></textarea>
-				  </div>
-
-
-				  <div className="form-group">
-				    <label for="exampleFormControlSelect1">Rate Per Hour</label>
-    				<input type="text" className="form-control" id="rate" name="costperhour" onChange={this.handleInputChange}></input>
+				    <textarea className="form-control" id="bio" name="bio" rows="3" onChange={this.handleInputChange}></textarea>
 				  </div>
 
 				  <div className="form-group">
