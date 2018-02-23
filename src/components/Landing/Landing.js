@@ -2,7 +2,6 @@ import React from "react";
 import "./Landing.css";
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
-import { slide as Menu } from 'react-burger-menu'
 
 const Landing = props => (
 	<div>
