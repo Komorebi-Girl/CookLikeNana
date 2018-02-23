@@ -1,3 +1,25 @@
+
 .jumbotron {
-	text-align: center
+	color: gray;
+	text-align: center;
+	height: 400px;
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(254,199,255,0.5)), color-stop(100%, rgba(255,207,153,1)));
+}
+.section {
+	padding: 25px;
+	color: white;
+}
+.section2 {
+	background-color: #ffc3ad;
+	padding: 25px;
+	color: white;
+}
+h1{
+	font-family: 'Abril Fatface', cursive;
+	font-size: 40px;
+}
+h6{
+	font-family: 'Abril Fatface', cursive;
+	text-shadow: 1px 1px gray;
+	font-size: 40px;
 }
