@@ -10,4 +10,16 @@ router.route("/nana")
 router.route("/user")
   .post(Controller.createUser);
 
+router.route("/getusers")
+  .post(Controller.findUsers);  
+
+router.route("/login")
+  .post(Controller.checkLogin);  
+  
+router.route("/logout")
+  .post(Controller.userLogout);
+
+router.route("/getdata")
+  .post(Controller.getUserData);  
+  
 module.exports = router;
