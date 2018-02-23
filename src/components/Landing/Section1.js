@@ -18,22 +18,21 @@ const styles = {
 
 const Section1 = props => (
 
+
 <div style={styles}>
 
     <Parallax  className="section" bgImage={image2}
       strength={500}>
       <div style={{height: 500}}>
-    
-     
-     <div style={insideStyles}>
-     <div className="Grid">
-     <div className="row">
-     <Col s={12} md={6}>
-      <h6>Calling all grandmas: we need your help</h6>
-         </Col>
-         <Col s={12} md={6}>
-         <p>
-              As a cook at Cook With Nana, you 
+      <div style={insideStyles}>
+      
+        <div className="Grid">
+        <div className="row">
+        <Col s={12} md={6}>
+          <h6>Calling all grandmas: we need your help</h6>
+            </Col>
+            <Col s={12} md={6}>
+         <p> As a cook at Cook With Nana, you 
              can teach new generations of home-chefs while making side-money. Once your profile is created in the sign-up page and your hourly rates and schedules are set, you're ready to 
              meet them and share your cooking wisdom!</p>
              <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign up as a granny</a></p>
@@ -51,6 +50,7 @@ const Section1 = props => (
      </div> 
     </Parallax>
     </div>
+
 
 );
 

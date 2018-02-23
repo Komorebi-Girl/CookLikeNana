@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import { Parallax, Background } from 'react-parallax';
 // import Hello from './Hello';
-
 const styles = {
     fontFamily: 'sans-serif',
     textAlign: 'left',
@@ -15,7 +14,6 @@ const styles = {
   const image1 = "https://static.pexels.com/photos/8279/muffin.jpg";
 
 const Section2 = props => (
-
     <div style={styles}>
     <Parallax className="section2"  bgImage={image1}
       strength={500}>
@@ -28,12 +26,11 @@ const Section2 = props => (
 		  <h6>Learn to cook from true experts: Grandmas</h6>
 		     </Col>
              <Col s={12} md={6}>
-             <p> Tired of sticking to microwaving? No idea where to start on a home-cooked meal? Avoid the hassle of
+             <p> Tired of constant microwaving? No idea where to start on a home-cooked meal? Avoid the hassle of
                endless Googling by signing up to meet a grandma with experience in a cuisine you want to learn more
                about preparing. From baking to traditional Italian food, get a real "taste" of home-cooking while learning
                how to make it happen with a new friend! </p><p>
              <a className="btn btn-primary btn-lg" href="#" role="button">Sign up as a learner</a></p>
-
             </Col>
             </div>
 
@@ -42,9 +39,9 @@ const Section2 = props => (
              </Col>
              </div>
           </div>
-		</div>
+	    	</div>
      </div> 
-    </Parallax>
+   </Parallax>
 
 		<div className="section2">
   footer
