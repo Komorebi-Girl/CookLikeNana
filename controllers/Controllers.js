@@ -1,4 +1,5 @@
 const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = {
     findAll: function(req, res) {
@@ -23,6 +24,14 @@ module.exports = {
             res.status(422).json(err);
         });
     },
+
+    findUsers: function(req, res) {
+      db.User.findAll({})
+      .then(Users => res.json(Users))
+      .catch(err => res.status(422).json(err));
+    },
+
+    checkLogin: passport.authenticate("local"),
 
     createNana: function(req, res) {
         console.log("Displaying req.body");
@@ -51,6 +60,26 @@ module.exports = {
             res.status(422).json(err);
         });
     }, 
+
+    userLogout: function(req, res) {
+      req.logout();
+      res.redirect("/");
+    },
+
+    getUserData: function(req, res) {
+      if (!req.user) {
+        // The user is not logged in, send back an empty object
+        res.json({});
+      }
+      else {
+        // Otherwise send back the user's email and id
+        // Sending back a password, even a hashed password, isn't a good idea
+        res.json({
+          email: req.user.email,
+          id: req.user.id
+        });
+      }
+    },
 
     createUser: function(req, res) {
         console.log("Displaying req.body");

@@ -31,7 +31,8 @@ passport.use(new LocalStrategy(
           message: "Incorrect password."
         });
       }
-      // If none of the above, return the user
+      // If none of the above, return the user 
+      console.log("Login Successful!")
       return done(null, dbUser);
     });
   }

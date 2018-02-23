@@ -4,7 +4,7 @@ import React from "react";
 // import NoMatch from "./components/NoMatch";
 // import NanaRegister from "./components/NanaRegister/NanaRegister";
 import UserRegister from "./components/UserRegister/UserRegister";
-import LoginPage from "./pages/LoginPage";
+// import LoginPage from "./pages/LoginPage";
 
 
 const App = () =>

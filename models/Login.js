@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt-nodejs");
+
 module.exports = function(sequelize, DataTypes) {
     var Login = sequelize.define("Login", {
       email: {
@@ -15,13 +17,13 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
-    // Login.prototype.validPassword = function(password) {
-    //   return bcrypt.compareSync(password, this.password);
-    // };
+    Login.prototype.validPassword = function(password) {
+      return bcrypt.compareSync(password, this.password);
+    };
     
-    // Login.hook("beforeCreate", function(user) {
-    //   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-    // });
+    Login.hook("beforeCreate", function(user) {
+      user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+    });
 
     return Login;
   };
