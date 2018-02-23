@@ -13,7 +13,7 @@ const Profile = props => (
 			</div>
 			<div class="col-md-8">
 				<h1>{props.firstname || "Rose"}</h1>
-				<p>{props.location || "Somerset, NJ"}</p>
+				<p>Somerset, NJ</p>
 				<h4>Cooking Specialties:</h4>
 				<p>{props.specialties || "Italian"}</p>
 				<h4>About Me:</h4>
