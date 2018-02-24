@@ -1,12 +1,12 @@
 import React from "react";
-import {bubble as Menu} from 'react-burger-menu'
+import {bubble as Menu, right} from 'react-burger-menu'
 import "./hamburger.css";
 import Icon from 'react-icons-kit';
 import { home, clock2, user } from 'react-icons-kit/icomoon';
-
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Row';
 import Grid from 'react-bootstrap/lib/Grid';
+
 
 const Hamburger = props => {
     // const showSettings = (event) => {
@@ -15,7 +15,7 @@ const Hamburger = props => {
 
     return (
         
-<Menu>
+<Menu right>
     <div className="Grid">
     <div className="row">
          <Col xs={6}>
@@ -33,9 +33,14 @@ const Hamburger = props => {
             {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
            </nav>
            </Col>
+           <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control-hamburger mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+      
+          <div><button class="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button></div>
+	    </form>
     </div>
     </div>
-</Menu>
+    </Menu >
     );
 }
 export default Hamburger;
