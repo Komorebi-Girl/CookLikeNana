@@ -1,4 +1,5 @@
 /* Position and sizing of burger button */
+
 .bm-burger-button {
     position: fixed;
     width: 36px;
@@ -16,18 +17,79 @@
     height: 24px;
     width: 24px;
   }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    background: #bdc3c7;
+  hr{
+    color: white;
   }
+
   
   /* General sidebar styles */
   .bm-menu {
     background: #373a47;
-    padding: 2.5em 1.5em 0;
+    padding: 4.5em 1.5em 0;
     font-size: 1.15em;
+    text-transform: uppercase;
   }
+  /* .bm-menu, 	
+  .nav {
+    height:40px;
+    background-color:white;
+    background-image:linear-gradient(top,white,#ddd);
+    font:normal bold 13px Segoe,"Segoe UI",Arial,Sans-Serif;
+    color:black;
+  } */
+  
+  .nav ul,
+  .nav li {
+    margin:0 0;
+    padding: 20px;;
+    list-style:none;
+    line-height: 30px;
+  }
+  
+  .nav ul {
+    height:30px;
+    padding:4px 0 0;
+  }
+  hr {
+    width: 100%;
+  }
+  .nav li {
+    float:left;
+    display:inline;
+    padding:5px 10px;
+    /* the tiny border */
+    border-left:1px solid #ccc;
+    border-right:1px solid white;
+  }
+  
+  .nav li:first-child {border-left:none}
+  .nav li:last-child {border-right:none}
+  
+  .nav a {
+    display:block;
+    line-height:40px;
+    height:40px;
+    padding:0 15px 2px;
+    color:white;
+    letter-spacing: 3px;
+    text-decoration:none;
+    border-radius:15px/25px;
+    opacity:0.5;
+  }
+  
+  /* the hover effect */
+  .nav a:hover {
+    background-color:#f58984;
+    background-image:linear-gradient(top,rgba(255, 155, 155, 0.61),rgba(0,0,0,.2));
+    opacity: 0;
+    color:white;
+    opacity:1;
+    /* transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; */
+ }
+ 
+
   
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
@@ -38,6 +100,7 @@
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
+    
   }
   
   /* Styling of overlay */
