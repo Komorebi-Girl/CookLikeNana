@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Controller = require("../../controllers/Controllers");
 
+const passport = require('../../config/passport');
+
 router.route("/nanas")
   .post(Controller.findAll);
 
@@ -14,12 +16,19 @@ router.route("/getusers")
   .post(Controller.findUsers);  
 
 router.route("/login")
-  .post(Controller.checkLogin);  
+  .post(Controller.checkLogin, (req, res) => {
+    // console.log(req.user);
+    res.send(req.user);
+  });  
   
+
 router.route("/logout")
   .post(Controller.userLogout);
 
-router.route("/getdata")
-  .post(Controller.getUserData);  
+router.route("/getnanadata")
+  .post(Controller.getNanaData);
+
+router.route("/getuserdata")
+  .post(Controller.getUserData);     
   
 module.exports = router;

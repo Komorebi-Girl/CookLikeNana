@@ -21,17 +21,20 @@ passport.use(new LocalStrategy(
     }).then(function(dbUser) {
       // If there's no user with the given email
       if (!dbUser) {
+        console.log('Wrong email address========================');
         return done(null, false, {
           message: "Incorrect email."
         });
       }
       // If there is a user with the given email, but the password the user gives us is incorrect
       else if (!dbUser.validPassword(password)) {
+        console.log('wrong password=============================');
         return done(null, false, {
           message: "Incorrect password."
         });
       }
       // If none of the above, return the user 
+      console.log('user is suppose to login right now========================');
       console.log("Login Successful!")
       return done(null, dbUser);
     });
@@ -46,6 +49,8 @@ passport.serializeUser(function(user, cb) {
 passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
+
+
 //
 // Exporting our configured passport
 module.exports = passport;

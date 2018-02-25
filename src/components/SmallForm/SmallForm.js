@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class SmallForm extends Component{
   state = {
     result: {}
   };
+
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
 
   handleInputChange = event => {
     const value = event.target.value;
@@ -18,10 +26,28 @@ class SmallForm extends Component{
     event.preventDefault();
     const yourEmail = this.state.email;
     const yourPassword = this.state.password;
-    API.signUp(yourEmail, yourPassword);
+    API.checkLogin(yourEmail, yourPassword)
+    .then(({ data }) => {
+      console.log(data);
+      console.log(this.props)
+      if(data.usertype == "2"){
+        this.props.history.push({
+          pathname: `/userprofile/${data.id}`
+        })
+      }
+      else if (data.usertype == "1"){
+        this.props.history.push({
+          pathname: `/nanaprofile/${data.id}`
+        })   
+      }
+    })
+    .catch(err => {
+      console.log('Error: ', err);
+    });
   };
 
   render() {
+    console.log(this.props);
     return (
     <form action="/api/signup" method="post">
       <div>Email</div>
@@ -36,4 +62,4 @@ class SmallForm extends Component{
 
 
 
-export default SmallForm;
+export default withRouter(SmallForm);

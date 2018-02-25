@@ -1,8 +1,14 @@
 import axios from "axios";
 
 export default {
-  signUp: function(eaddress, pass){
-    return axios.post("/api/signup", {email:eaddress, password:pass});
+  checkLogin: async function(eaddress, pass){
+    return axios.post("/api/login", {email:eaddress, password:pass});
+  },
+  grabNanaData: function(){
+    return axios.post("/api/getnanadata");
+  },
+  grabUserData: function(){
+    return axios.post("/api/getuserdata");
   },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
