@@ -15,7 +15,7 @@ class UserProfile extends Component {
  componentDidMount(){
    API.grabUserData().then(res => {
      console.log(res)
-    this.setState({firstname: res.data.fullname, location: res.data.location, bio: res.data.bio, image: res.data.profileimage})
+    this.setState({fullname: res.data.fullname, location: res.data.location, bio: res.data.bio, image: res.data.profileimage})
    })
  } 
 
