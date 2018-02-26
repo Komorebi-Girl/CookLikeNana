@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
 import "./NanaRegister.css";
+import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class NanaRegister extends Component {
   state = {
@@ -20,7 +22,13 @@ class NanaRegister extends Component {
     hispaniccuisine: false,
     vegetarianvegan: false,
     baking: false
-  };
+	};
+	
+	static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
 
   saveNana = (event) => {
 		event.preventDefault();
@@ -42,7 +50,10 @@ class NanaRegister extends Component {
     })
       .then(res => {
 				console.log(res);
-        this.setState({ nana: res.data})
+				this.setState({ nana: res.data});
+				this.props.history.push({
+          pathname: `/nana/${res.nanaid}`
+			  })
       })
       .catch(err => console.log(err));
   };
@@ -168,4 +179,4 @@ class NanaRegister extends Component {
   }
 }
 
-export default NanaRegister;
+export default withRouter(NanaRegister);

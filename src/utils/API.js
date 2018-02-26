@@ -13,6 +13,9 @@ export default {
   getNanabyID: function(id) {
     return axios.get("/api/nana/" + id);
   },  
+  getUserbyID: function(id) {
+    return axios.get("/api/user/" + id);
+  },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);

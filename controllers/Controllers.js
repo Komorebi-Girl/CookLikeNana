@@ -40,6 +40,7 @@ module.exports = {
       .then(dbModel => {
         console.log("MADE IT HERE!");
         db.Login.create({
+          profileid: dbModel.nanaid,
           email: req.body.email,
           password: req.body.password,
           usertype: 1
@@ -68,6 +69,13 @@ module.exports = {
 
   findNanaById: function(req, res) {
     db.Nana
+    .findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
+  findUserById: function(req, res) {
+    db.User
     .findById(req.params.id)
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
@@ -112,8 +120,11 @@ getUserData: function (req, res) {
     console.log(req.body);
     db.User.create(req.body)
       .then(dbModel => {
+        console.log("User ID =is");
+        console.log(dbModel.userid);
         console.log("MADE IT HERE!");
         db.Login.create({
+          profileid: dbModel.userid,
           email: req.body.email,
           password: req.body.password,
           usertype: 2

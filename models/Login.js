@@ -2,6 +2,9 @@ const bcrypt = require("bcrypt-nodejs");
 
 module.exports = function(sequelize, DataTypes) {
     var Login = sequelize.define("Login", {
+      profileid: {
+        type: DataTypes.INTEGER
+      },
       email: {
         type: DataTypes.STRING,
         isUnique : true,

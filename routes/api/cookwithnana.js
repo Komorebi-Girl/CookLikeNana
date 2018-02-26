@@ -9,6 +9,9 @@ router.route("/nanas")
 router.route("/nana/:id")
   .get(Controller.findNanaById);  
 
+  router.route("/user/:id")
+  .get(Controller.findUserById);  
+
 router.route("/nana")
   .post(Controller.createNana);
 

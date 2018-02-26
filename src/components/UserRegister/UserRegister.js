@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
 import "./UserRegister.css";
+import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class UserRegister extends Component {
   state = {
@@ -19,6 +21,12 @@ class UserRegister extends Component {
     baking: false
   };
 
+	static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+	}
+	
   saveUser = (event) => {
 		event.preventDefault();
     API.saveUser({
@@ -35,9 +43,12 @@ class UserRegister extends Component {
       baking: this.state.baking
     })
       .then(res => {
+				console.log("RESSSSSSSSSSS");
 				console.log(res);
-        this.setState({user: res.data})
-      })
+        this.props.history.push({
+          pathname: `/user/${res.userid}`
+			  })
+			})
       .catch(err => console.log(err));
   };
 
@@ -141,4 +152,4 @@ class UserRegister extends Component {
   }
 }
 
-export default UserRegister;
+export default withRouter(UserRegister);
