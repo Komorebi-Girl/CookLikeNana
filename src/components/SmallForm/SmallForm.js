@@ -30,12 +30,12 @@ class SmallForm extends Component{
     .then(({ data }) => {
       console.log(data);
       console.log(this.props)
-      if(data.usertype == "2"){
+      if(data.usertype === "2"){
         this.props.history.push({
           pathname: `/userprofile/${data.id}`
         })
       }
-      else if (data.usertype == "1"){
+      else if (data.usertype === "1"){
         this.props.history.push({
           pathname: `/nanaprofile/${data.id}`
         })   
