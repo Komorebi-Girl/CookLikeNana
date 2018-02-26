@@ -3,7 +3,7 @@
 }
 .bg-light {
     height: 90px;
-    /* box-shadow: 0 0 8px 1px #8080808f; */
+    box-shadow: 0 0 8px 1px #8080808f;
     top: 0;
 }
 

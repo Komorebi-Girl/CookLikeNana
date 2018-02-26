@@ -11,7 +11,6 @@ const styles = {
     textAlign: 'left',
   };
   const insideStyles = {padding: 2, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
-  const image1 = "https://static.pexels.com/photos/349610/pexels-photo-349610.jpeg";
   const image2 = "https://static.pexels.com/photos/414660/pexels-photo-414660.jpeg";
 
 const Section1 = props => (

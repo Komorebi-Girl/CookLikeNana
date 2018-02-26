@@ -4,13 +4,14 @@ import "./Landing.css";
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Cover from 'react-video-cover';
-import NavBar from "../../components/NavBar/NavBar.js";
+import Col from 'react-bootstrap/lib/Col';
 
 const style = {
   width: '100vw',
   height: '500px',
   position: 'relative',
-
+  background: '-moz-linear-gradient(45deg, rgba(174,87,179,1) 0%, rgba(228,155,235,1) 40%, rgba(255,213,158,1) 100%)',
+	background: '-webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(174,87,179,1)), color-stop(40%, rgba(228,155,235,1)), color-stop(100%, rgba(255,213,158,1)))',
 	top: -0,
   left: 0,
   zIndex: -0,
@@ -19,7 +20,6 @@ const style = {
 		
 const Landing = props => (
 	<div>
-		<NavBar />
 				<div style={style} >
 
   <header className="header" id="header">
@@ -33,12 +33,19 @@ const Landing = props => (
 </video >
         
 <div className="content">
+  <Grid>
+    <Row>
+    <Col s={12} md={1}></Col>
+      <Col s={12} md={10}>
     <h1>Welcome to Cook With Nana!</h1> 
 			<h4>	Lost college freshmen. Broke Milienials. Stressed out newly weds. When it comes to cooking, a lot of people don't know where to start. 
              That's why we set up Cook With Nana: to help new cooks gain the knowledge to cook like pros, and nothing beats an authentic homemade meal from grandma.	 
-						 	</h4>	
+						 	</h4>	<br></br>
                <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign Up Now</a></p>
-
+    </Col> 
+    <Col s={12} md={1}></Col>
+    </Row>
+    </Grid> 
     {/* <Cover
           videoOptions={videoOptions}
           remeasureOnWindowResize
@@ -64,7 +71,7 @@ const Landing = props => (
     <div class="main-container">
 
       <section-slant>
-					<h1>How does it work?</h1>
+					<h2>How does it work?</h2>
 		 			<h4>Depending on whether you want to sign up as a cook or learner it works a bit differently:</h4>
         </section-slant>
 				</div>

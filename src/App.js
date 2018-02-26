@@ -9,6 +9,7 @@ import UserProfile from "./components/UserProfile";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
+import PreComponent from "./components/PreComponent";
 import Section1 from "./components/Landing/Section1";
 import Section2 from "./components/Landing/Section2";
 // authenticate = userInfo => {
@@ -17,13 +18,11 @@ import Section2 from "./components/Landing/Section2";
 
 const App = () => {
 
- {/* <Landing />
-<Section1 />
-<Section2 />  */}
 return (
  <Router>
    <div>
-    {/* <NavBar /> */}
+    <NavBar />
+    <PreComponent />
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/login" component={LoginPage} />

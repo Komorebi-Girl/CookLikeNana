@@ -26,6 +26,9 @@ const NavBar = props => (
 	    </form>
 	  </div>
 	</nav> 
+	<div>
+		
+	</div>
 </div>
 );
 

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
-import NavBar from "../../components/NavBar/NavBar.js";
 
 class SmallForm extends Component{
   state = {
@@ -48,7 +47,7 @@ class SmallForm extends Component{
   };
 
   render() {
-    <NavBar />
+    
     console.log(this.props);
     return (
     
