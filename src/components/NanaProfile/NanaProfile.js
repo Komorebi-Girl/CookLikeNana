@@ -35,7 +35,7 @@ class NanaProfile extends Component {
 				<h1>{this.state.nana.firstname}&nbsp;{this.state.nana.lastname}</h1>
 				<p>{this.state.nana.location}</p>
 				<h4>Cooking Specialties:</h4>
-				<p>Italian</p>
+				<p>Italian, Southern, Baking</p>
 				<h4>About Me:</h4>
 				<p>{this.state.nana.bio}</p>
 				<button type="button" className="btn btn-primary">Make An Appointment With Me!</button>
