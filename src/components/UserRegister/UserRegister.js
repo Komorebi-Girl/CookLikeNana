@@ -46,7 +46,7 @@ class UserRegister extends Component {
 				console.log("RESSSSSSSSSSS");
 				console.log(res);
         this.props.history.push({
-          pathname: `/user/${res.userid}`
+          pathname: `/user/${res.data.profileid}`
 			  })
 			})
       .catch(err => console.log(err));

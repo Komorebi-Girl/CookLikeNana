@@ -52,7 +52,7 @@ class NanaRegister extends Component {
 				console.log(res);
 				this.setState({ nana: res.data});
 				this.props.history.push({
-          pathname: `/nana/${res.nanaid}`
+          pathname: `/nana/${res.data.profileid}`
 			  })
       })
       .catch(err => console.log(err));
