@@ -27,7 +27,7 @@ class NanaProfile extends Component {
 		<div className="row">
 			<div class="col-md-4">
 				<div class="thumbnail">
-      				<img src={this.state.nana.profileimage} alt="grandma"></img>
+      				<img src={this.state.nana.profileimage} alt="grandma" className="profilephoto"></img>
     		</div>
 		  </div>
 
