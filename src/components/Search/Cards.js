@@ -15,7 +15,6 @@ class Cards extends Component {
     handleClick = (nanaid) => (event) => {
         event.preventDefault();   
         console.log("Nana ID is " + nanaid);
-        // browserHistory.push("/nana/" + nanaid);
         this.props.history.push({
             pathname: `/nana/${nanaid}`
         });

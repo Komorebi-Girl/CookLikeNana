@@ -22,8 +22,8 @@ const App = () =>
         <Route exact path="/" component={Landing} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/nanas" component={SearchPage} />
-        <Route path="/nana" component={NanaRegister} />
-        <Route path="/user" component={UserRegister} />
+        <Route exact path="/nana" component={NanaRegister} />
+        <Route exact path="/user" component={UserRegister} />
         <Route path="/nana/:id" component={NanaProfile} />
         <Route path="/user/:id" component={UserProfile} />
         <Route component={NoMatch} />
