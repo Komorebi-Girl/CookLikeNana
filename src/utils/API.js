@@ -10,6 +10,9 @@ export default {
   grabUserData: function(){
     return axios.post("/api/getuserdata");
   },
+  getNanabyID: function(id) {
+    return axios.get("/api/nana/" + id);
+  },  
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);

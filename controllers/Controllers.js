@@ -66,6 +66,13 @@ module.exports = {
     res.redirect("/");
   },
 
+  findNanaById: function(req, res) {
+    db.Nana
+    .findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
   getNanaData: function (req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
