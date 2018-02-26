@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Profile.css";
 import API from "../../utils/API";
+import Calendar from "../Calendar"
+
 
 class NanaProfile extends Component {
   state = {
@@ -20,13 +22,13 @@ class NanaProfile extends Component {
     return(	<div className="container">
 		<div className="row">
 
-			<div class="col-md-4">
-				<div class="thumbnail">
+			<div className="col-md-4">
+				<div className="thumbnail">
       				<img src={this.state.image} alt="grandma"></img>
     		</div>
 		  </div>
 
-			<div class="col-md-8">
+			<div className="col-md-8">
 				<h1>{this.state.firstname}</h1>
 				<p>{this.state.location}</p>
 				<h4>Cooking Specialties:</h4>
@@ -35,8 +37,14 @@ class NanaProfile extends Component {
 				<p>{this.state.bio}</p>
 				<button type="button" className="btn btn-primary">Make An Appointment With Me!</button>
 			</div>
-
 		</div>
+
+    <div className="row">
+      <div className="col-md-8">
+        <Calendar/>
+      <div>
+    <div>
+
 	</div>)}  
 };
 
