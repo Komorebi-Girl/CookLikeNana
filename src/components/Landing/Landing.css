@@ -1,7 +1,7 @@
 body{
-	background: -moz-linear-gradient(45deg, rgba(174,87,179,1) 0%, rgba(228,155,235,1) 40%, rgba(255,213,158,1) 100%); /* ff3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(174,87,179,1)), color-stop(40%, rgba(228,155,235,1)), color-stop(100%, rgba(255,213,158,1))); /* safari4+,chrome */
-}
+	background: -moz-linear-gradient(45deg, rgba(174,87,179,1) 0%, rgba(228,155,235,1) 40%, rgba(255,213,158,1) 100%); 
+	 background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(174,87,179,1)), color-stop(40%, rgba(228,155,235,1)), color-stop(100%, rgba(255,213,158,1))); 
+} 
 .jumbotron {
 	color:#616985;
 	text-align: center;
@@ -54,7 +54,7 @@ html {
 	bottom: 0;
 	overflow: visible;
 	width: 100%;
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(254,199,255,90)), color-stop(100%, rgba(255,207,153,1)));
+	/* background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(254,199,255,90)), color-stop(100%, rgba(255,207,153,1))); */
 	z-index: -1;
 	-webkit-transform: skewY(-2deg);
 	-moz-transform: skewY(-2deg);
@@ -66,12 +66,10 @@ html {
   }
   
   .header .skew .header-inner {
-	padding: 40px;
+
 	margin-left: auto;
 	margin-right: auto;
   }
-  
-
   
   .container-slant {
 	padding-top: 60px;
@@ -111,8 +109,8 @@ html {
   }
   .btn-primary {
     color: #fff;
-    background-color: #e49beb;
-	border-color: #e49beb;
+		background-color: #292d45;
+		border-color: #292d45;
 	/* a  {
 		color: #fac7ff;
 		text-decoration: none;
@@ -123,14 +121,28 @@ html {
 
 .btn-primary {
     color: #fff;
-    background-color: #e49beb;
-	border-color: #e49beb;
-	box-shadow: 1px 1px 2px #616985;
+		background-color: #292d45;
+		border-color: #292d45;
+	box-shadow: 1px 1px 2px ;
+}
 
-	/* a  {
-		color: #fac7ff;
-		text-decoration: none;
-		background-color: transparent;
-		-webkit-text-decoration-skip: objects;
-	} */
+#myVideo {
+	position: fixed;
+	right: 0;
+	top: 10px;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.4;
+	background: black;
+}
+
+.content {
+	position: fixed;
+	color: #ffffff;
+	width: 85%;
+	padding: 20px;
+	text-shadow: 1px 1px gray;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	left: 100px;
 }

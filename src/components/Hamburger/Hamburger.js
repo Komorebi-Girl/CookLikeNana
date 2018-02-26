@@ -33,10 +33,10 @@ const Hamburger = props => {
             {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
            </nav>
            </Col>
-           <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control-hamburger mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+           <form className="form-inline my-2 my-lg-0">
+	      <input className="form-control-hamburger mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
       
-          <div><button class="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button></div>
+          <div><button className="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button></div>
 	    </form>
     </div>
     </div>

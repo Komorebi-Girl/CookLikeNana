@@ -9,24 +9,24 @@ import NanaRegister from "../NanaRegister";
 import UserRegister from "../UserRegister";
 import UserProfile from "../UserProfile";
 import LoginPage from "/Users/erinrizal/class/CookWithNana/src/pages/LoginPage";
+import {NavItem, Navbar, Nav, MenuItem} from "react-bootstrap";
 
 const NavBar = props => (
-	<div>
-		<Hamburger />
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div id="navContainer">
+<Hamburger />
+			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 
-	  <a class="navbar-brand" href="/">Cook With Nana</a> 
-		<button class="btn " type="submit" exact path="/login" component={LoginPage} >LOG IN</button>
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <a className="navbar-brand" href="/">Cook With Nana</a> 
+		<a className="btn" href="/login" role="button">log in</a>
+	  <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search for appointments" aria-label="Search"></input>
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button>
+	    <form className="form-inline my-2 my-lg-0">
+	      <input className="form-control mr-sm-2" type="search" placeholder="Search for appointments" aria-label="Search"></input>
+	      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button>
 	    </form>
-	
 	  </div>
-	</nav>
-	</div>
+	</nav> 
+</div>
 );
 
 export default NavBar;

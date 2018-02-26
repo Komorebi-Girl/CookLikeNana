@@ -6,9 +6,11 @@ class SearchPage extends Component {
 
   render() {
     return (
+      <div>
       <Container fluid>
         <SmallForm/>
       </Container>
+      </div>
     );
   }
 }
