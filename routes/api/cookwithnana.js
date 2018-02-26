@@ -3,6 +3,9 @@ const Controller = require("../../controllers/Controllers");
 
 router.route("/nanas")
   .post(Controller.findAll);
+  
+router.route("/nana/:nanaid")
+  .get(Controller.findNanaById);
 
 router.route("/nana")
   .post(Controller.createNana);

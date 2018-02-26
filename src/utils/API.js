@@ -18,6 +18,9 @@ export default {
     console.log("Save User data");
     console.log(savedata);
     return axios.post("/api/user", savedata);
+  },
+  getNanabyID: function(id) {
+    return axios.get("/api/nana/" + id);
   }
 }
 

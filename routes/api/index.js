@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const nanaRoutes = require("./nana");
+const Routes = require("./cookwithnana");
 
-router.use(nanaRoutes);
+router.use(Routes);
 
 module.exports = router;

@@ -25,6 +25,13 @@ module.exports = {
         });
     },
 
+    findNanaById: function(req, res) {
+        db.Nana
+        .findById(req.params.id)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+
     findUsers: function(req, res) {
       db.User.findAll({})
       .then(Users => res.json(Users))
