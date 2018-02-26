@@ -25,7 +25,7 @@ class UserProfile extends Component {
 
 			<div class="col-md-4">
 				<div class="thumbnail">
-      				<img src={this.state.image} alt="user"></img>
+      				<img src={this.state.image} alt="user" className="profilephoto"></img>
     		</div>
 		  </div>
 

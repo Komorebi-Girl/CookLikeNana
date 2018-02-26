@@ -32,12 +32,12 @@ class SmallForm extends Component{
       console.log(this.props)
       if(data.usertype == "2"){
         this.props.history.push({
-          pathname: `/userprofile/${data.id}`
+          pathname: `/user/${data.id}`
         })
       }
       else if (data.usertype == "1"){
         this.props.history.push({
-          pathname: `/nanaprofile/${data.id}`
+          pathname: `/nana/${data.id}`
         })   
       }
     })
@@ -53,7 +53,7 @@ class SmallForm extends Component{
       <div>Email</div>
       <input type="text" name="email" onChange={this.handleInputChange}></input>
       <div>Password</div>  
-      <input type="text" name="password" onChange={this.handleInputChange}></input>
+      <input type="password" name="password" onChange={this.handleInputChange}></input>
       <input type="submit" value="Submit" onClick={this.handleFormSubmit}></input>
     </form>)}  
 };
