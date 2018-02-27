@@ -44,9 +44,11 @@ class UserRegister extends Component {
     })
       .then(res => {
 				console.log("RESSSSSSSSSSS");
-				console.log(res);
+				console.log(JSON.stringify(res.data));
+				this.setState({ user: res.data});
         this.props.history.push({
-          pathname: `/user/${res.data.profileid}`
+					// pathname: `/user/${res.data}`
+					pathname: "/user/" + res.data.profileid
 			  })
 			})
       .catch(err => console.log(err));
@@ -83,63 +85,63 @@ class UserRegister extends Component {
 				<form>
 				<div className="row">
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Full Name</label>
+				    <label for="exampleFormControlSelect1">Full Name (Required)</label>
     				<input type="text" className="form-control" id="fullname" name="fullname"  onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleInputEmail1">Email</label>
+				    <label for="exampleInputEmail1">Email (Required)</label>
 				    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"  onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
 
 				<div className="row">
 				  <div class="form-group col-md-6">
-				    <label for="exampleInputPassword1">Password</label>
+				    <label for="exampleInputPassword1">Password (Required)</label>
 				    <input type="password" class="form-control" id="password" name="password"  onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Address</label>
+				    <label for="exampleFormControlSelect1">Address (Required)</label>
     				<input type="text" className="form-control" id="address" name="address"  onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
 
 				  <div className="form-group">
-				    <label for="exampleFormControlSelect1">Link to Photo (Optional)</label>
+				    <label for="exampleFormControlSelect1">Profile Image Link</label>
     				<input type="text" className="form-control" id="photo" name="profileimage"  onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group">
-				    <label for="exampleFormControlTextarea1">Tell Us About Yourself (Optional)</label>
+				    <label for="exampleFormControlTextarea1">Tell Us About Yourself</label>
 				    <textarea className="form-control" id="bio" rows="3" name="bio"  onChange={this.handleInputChange}></textarea>
 				  </div>
 
 				   <div className="form-group">
-				  	<label for="exampleFormControlTextarea1">Cuisine Preference (Optional)</label>
+				  	<label for="exampleFormControlTextarea1">Cuisine Preference</label>
 				    <div>
 						<input type="checkbox" id="italian" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}></input>
-				    	<label for="checkbox1">Italian Cuisine</label>
+				    	<label for="checkbox1">&nbsp;Italian Cuisine</label>
 					</div>
 					
 					<div>
 					    <input type="checkbox" id="southern" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}></input>
-					    <label for="checkbox2">Southern Cuisine</label>
+					    <label for="checkbox2">&nbsp;Southern Cuisine</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="hispanic" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}></input>
-					    <label for="checkbox3">Hispanic Cuisine</label>
+					    <label for="checkbox3">&nbsp;Hispanic Cuisine</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="vegvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}></input>
-					    <label for="checkbox4">Vegetarian/Vegan</label>
+					    <label for="checkbox4">&nbsp;Vegetarian/Vegan</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}></input>
-					    <label for="checkbox5">Baking</label>
+					    <label for="checkbox5">&nbsp;Baking</label>
 					</div>
 				  </div>
 				
