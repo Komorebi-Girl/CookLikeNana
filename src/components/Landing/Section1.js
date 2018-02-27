@@ -32,7 +32,7 @@ const Section1 = props => (
          <h5> As a cook at Cook With Nana, you 
              can teach new generations of home-chefs while making side-money. Once your profile is created in the sign-up page and your hourly rates and schedules are set, you're ready to 
              meet them and share your cooking wisdom!</h5>
-             <p><a className="btn btn-primary btn-lg" href="/nana_register" role="button">Sign up as a granny</a></p>
+             <p><a className="btn btn-primary btn-lg " href="/nana_register" role="button">Sign up as a granny</a></p>
         </Col>
         </div>
          <div className="row">

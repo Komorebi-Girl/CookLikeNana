@@ -24,7 +24,7 @@ h1{
 	font-size: 2em
 }
 h5{
-	font-size: 1.2em
+	font-size: 1.1em
 }
 .sectionbod {
 	text-shadow: .5px .5px gray;
@@ -50,7 +50,6 @@ html {
   .header {
 	z-index: 1;
 	position: relative;
-	
   }
   
   .header .skew:before {
@@ -113,17 +112,12 @@ html {
 	position: relative;
 	max-width: 400px;
   }
-  .btn-primary {
-    color: #fff;
-		background-color:transparent;
-		border-color: #ffffff;
 
-}
 
 .btn-primary {
-		color: #fff;
+		color: gray;
 		border-width: 2px;
-		background-color:transparent;
+		background-color: #f58984;
 		border-color: #ffffff;
 }
 

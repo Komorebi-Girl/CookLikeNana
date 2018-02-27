@@ -146,7 +146,7 @@ class UserRegister extends Component {
 					</div>
 				  </div>
 				
-				<button type="button" className="btn btn-primary" onClick={this.saveUser} >Submit</button>
+				<button type="button" className="btn btn-userreg" onClick={this.saveUser} >Submit</button>
 				</form>
 			</div>
 		</div>

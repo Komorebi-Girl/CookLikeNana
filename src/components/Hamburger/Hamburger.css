@@ -42,7 +42,6 @@
   }
   .btn {
     color: #946288;
-    background-color: transparent;
     background-image: none;
     border-color: #946288;
   }
@@ -109,8 +108,8 @@
     opacity:0.5;
   }
   .btn-primary {
-    color: #fff;
-		background-color:transparent;
+    color: rgb(253, 192, 238);
+
 		border-color: #ffffff;
 
 }
@@ -118,7 +117,7 @@
 .btn-primary {
 		color: #fff;
 		border-width: 2px;
-		background-color:transparent;
+
 		border-color: #ffffff;
 }
   /* the hover effect */
