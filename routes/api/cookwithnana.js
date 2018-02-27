@@ -34,6 +34,15 @@ router.route("/login")
 router.route("/logout")
   .post(Controller.userLogout);
 
+router.route("/findtimeslot")
+  .post(Controller.findTimeSlot);
+
+router.route("/createtimeslot")
+  .post(Controller.createTimeSlot);
+
+router.route("/deletetimeslot")
+  .post(Controller.deleteTimeSlot);
+  
 router.route("/getnanadata")
   .post(Controller.getNanaData);
 
