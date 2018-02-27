@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
 import "./NanaRegister.css";
+import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 class NanaRegister extends Component {
   state = {
@@ -20,7 +22,13 @@ class NanaRegister extends Component {
     hispaniccuisine: false,
     vegetarianvegan: false,
     baking: false
-  };
+	};
+	
+	static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
 
   saveNana = (event) => {
 		event.preventDefault();
@@ -42,7 +50,12 @@ class NanaRegister extends Component {
     })
       .then(res => {
 				console.log(res);
-        this.setState({ nana: res.data})
+				this.setState({ nana: res.data});
+				alert("Thanks for signing up. Your profile has been successfull created");
+				this.props.history.push({
+					// pathname: `/nana/${res.data}`
+					pathname: "/nana/" + res.data.profileid
+			  })
       })
       .catch(err => console.log(err));
   };
@@ -78,12 +91,12 @@ class NanaRegister extends Component {
 				<form>
 				<div className="row">
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">First Name</label>
+				    <label for="exampleFormControlSelect1">First Name (Required)</label>
     				<input type="text" className="form-control" id="firstname" name="firstname" onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Last Name</label>
+				    <label for="exampleFormControlSelect1">Last Name (Required)</label>
     				<input type="text" className="form-control" id="lastname" name="lastname" onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
@@ -91,36 +104,36 @@ class NanaRegister extends Component {
 
 				<div className="row">
 				  <div className="form-group col-md-6">
-				    <label for="exampleInputEmail1">Email address</label>
+				    <label for="exampleInputEmail1">Email address (Required)</label>
 				    <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleInputPassword1">Password</label>
+				    <label for="exampleInputPassword1">Password (Required)</label>
 				    <input type="password" class="form-control" id="password" name="password" onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
 
 				<div className="row">
 				  <div class="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Location</label>
+				    <label for="exampleFormControlSelect1">Location (Required)</label>
     				<input type="text" className="form-control" id="location" name="location" onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Link to Photo</label>
+				    <label for="exampleFormControlSelect1">Profile Image Link (Required)</label>
     				<input type="text" className="form-control" id="profileimage" name="profileimage" onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
 
 				<div className="row">
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">YouTube Link</label>
+				    <label for="exampleFormControlSelect1">YouTube Intro Link</label>
     				<input type="text" className="form-control" id="youtube" name="youtubelink" onChange={this.handleInputChange}></input>
 				  </div>
 
 				  <div className="form-group col-md-6">
-				    <label for="exampleFormControlSelect1">Rate Per Hour</label>
+				    <label for="exampleFormControlSelect1">Rate Per Hour (Required)</label>
     				<input type="text" className="form-control" id="costperhour" name="costperhour" onChange={this.handleInputChange}></input>
 				  </div>
 				</div>
@@ -132,30 +145,30 @@ class NanaRegister extends Component {
 				  </div>
 
 				  <div className="form-group">
-				  	<label for="exampleFormControlTextarea1">Cuisine Specialty</label>
+				  	<label for="exampleFormControlTextarea1">Cuisine Expertise</label>
 				    <div>
 						<input type="checkbox" id="italian" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}></input>
-				    	<label for="checkbox1">Italian Cuisine</label>
+				    	<label for="checkbox1">&nbsp;Italian Cuisine</label>
 					</div>
 					
 					<div>
 					    <input type="checkbox" id="southern" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}></input>
-					    <label for="checkbox2">Southern Cuisine</label>
+					    <label for="checkbox2">&nbsp;Southern Cuisine</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="hispanic" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}></input>
-					    <label for="checkbox3">Hispanic Cuisine</label>
+					    <label for="checkbox3">&nbsp;Hispanic Cuisine</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="vegvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}></input>
-					    <label for="checkbox4">Vegetarian/Vegan</label>
+					    <label for="checkbox4">&nbsp;Vegetarian/Vegan</label>
 					</div>
 
 					<div>
 					    <input type="checkbox" id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}></input>
-					    <label for="checkbox5">Baking</label>
+					    <label for="checkbox5">&nbsp;Baking</label>
 					</div>
 				  </div>
 				
@@ -168,4 +181,4 @@ class NanaRegister extends Component {
   }
 }
 
-export default NanaRegister;
+export default withRouter(NanaRegister);

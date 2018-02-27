@@ -6,6 +6,15 @@ const passport = require('../../config/passport');
 router.route("/nanas")
   .post(Controller.findAll);
 
+router.route("/nana/:id")
+  .get(Controller.findNanaById);  
+
+router.route("/nanacalendar/:id")
+  .get(Controller.findNanaCalendar);    
+
+router.route("/user/:id")
+  .get(Controller.findUserById);  
+
 router.route("/nana")
   .post(Controller.createNana);
 

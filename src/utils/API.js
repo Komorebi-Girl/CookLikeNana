@@ -22,7 +22,16 @@ export default {
   deleteTimeSlot: function(day, time, id){
     return axios.post("/api/deletetimeslot", {nanaid:id, availableday:day, availabletime:time})
   },
-
+    
+  getNanabyID: function(id) {
+    return axios.get("/api/nana/" + id);
+  },  
+  getUserbyID: function(id) {
+    return axios.get("/api/user/" + id);
+  },
+  getNanaCalendar: function(id) {
+    return axios.get("/api/nanacalendar/" + id);
+  },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);

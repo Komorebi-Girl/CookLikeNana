@@ -40,6 +40,7 @@ module.exports = {
       .then(dbModel => {
         console.log("MADE IT HERE!");
         db.Login.create({
+          profileid: dbModel.nanaid,
           email: req.body.email,
           password: req.body.password,
           usertype: 1
@@ -64,6 +65,38 @@ module.exports = {
   userLogout: function (req, res) {
     req.logout();
     res.redirect("/");
+  },
+
+  findNanaById: function(req, res) {
+    db.Nana
+    .findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
+  findUserById: function(req, res) {
+    db.User
+    .findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
+  findNanaCalendar: function(req, res) {
+    console.log("Displaying Calendar");
+    console.log(req.params.id);
+    db.Calendar.findAll({
+      where: {
+        nanaid: req.params.id
+      }
+    })
+      .then(dbModel => {
+        console.log('data in findAll: ', dbModel)
+        res.json(dbModel);
+      })
+      .catch(err => {
+        console.log('Error in findAll: ', err);
+        res.status(422).json(err);
+      });
   },
 
   getNanaData: function (req, res) {
@@ -105,8 +138,11 @@ getUserData: function (req, res) {
     console.log(req.body);
     db.User.create(req.body)
       .then(dbModel => {
+        console.log("User ID =is");
+        console.log(dbModel.userid);
         console.log("MADE IT HERE!");
         db.Login.create({
+          profileid: dbModel.userid,
           email: req.body.email,
           password: req.body.password,
           usertype: 2

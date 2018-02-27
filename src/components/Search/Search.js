@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
-import SearchResults from "../SearchResults";
 import { Input, FormBtn } from "../../components/Form";
+import Cards from "./Cards";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class Search extends Component {
   state = {
     nanas: [],
     location: "",
-    date: "",
     italiancuisine: false,
     southerncuisine: false,
     hispaniccuisine: false,
@@ -28,7 +28,7 @@ class Search extends Component {
     })
       .then(res => {
         console.log(res);
-        this.setState({ nanas: res.data, location: "", date: "", italiancuisine: false, southerncuisine: false, hispaniccuisine: false,  vegetarianvegan: false, baking: false })
+        this.setState({ nanas: res.data, location: "", italiancuisine: false, southerncuisine: false, hispaniccuisine: false,  vegetarianvegan: false, baking: false })
       })
       .catch(err => console.log(err));
   };
@@ -57,39 +57,43 @@ class Search extends Component {
 
   render() {
     return (
-      <Container style={{ minHeight: "80%" }}>
+      <Container style={{ maxWidth: "90%" }}>
         <form>
-              <Input
+        <div className="row">
+				  <div className="form-group col-md-4 text-center">
+              <Input type="text"
                 value={this.state.location}
                 onChange={this.handleInputChange}
                 name="location"
-                placeholder="Location (required)"
+                placeholder="Location (Required)"
               />
-              <Input
-                value={this.state.date}
-                onChange={this.handleInputChange}
-                name="date"
-                placeholder="Date (required)"
-              />
+          </div>
+        </div>
+        <div>  
+          <div className="form-group col-md-12 text-center">
               <input type="checkbox" id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
-              <label for="italiancuisine"> Italian Cuisine</label>
+              <label for="italiancuisine">&nbsp;Italian Cuisine&nbsp;&nbsp;&nbsp;</label>
               <input type="checkbox" id="southerncuisine" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}/>
-              <label for="southerncuisine"> Southern Cuisine</label>
+              <label for="southerncuisine">&nbsp;Southern Cuisine&nbsp;&nbsp;&nbsp;</label>
               <input type="checkbox" id="hispaniccuisine" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}/>
-              <label for="hispaniccuisine"> Hispanic Cuisine</label>
+              <label for="hispaniccuisine">&nbsp;Hispanic Cuisine&nbsp;&nbsp;&nbsp;</label>
               <input type="checkbox" id="vegetarianvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}/>
-              <label for="vegcuisine"> Vegetarian/Vegan Cuisine</label>
+              <label for="vegcuisine">&nbsp;Vegetarian/Vegan Cuisine&nbsp;&nbsp;&nbsp;</label>
               <input type="checkbox" id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}/>
-              <label for="baking"> Baking</label>
-              <FormBtn
-                disabled={!(this.state.location && this.state.date)}
-                onClick={this.loadNanas}
-              >
-              Search
-              </FormBtn>
-            </form>
-        <SearchResults results={this.state.nanas} />
-      </Container>
+              <label for="baking">&nbsp;Baking</label>
+          </div>
+				</div> 
+        <div className="row"> 
+          <div class="col-md-12 text-center">   
+            <button type="button" className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
+          </div>
+        </div>
+        </form>
+        <div className="container" style={{height:"50px"}}></div>	  
+        <div id="container">
+          <Cards results={this.state.nanas} />
+        </div>
+    </Container>
     );
   }
 }
