@@ -25,7 +25,7 @@ const Hamburger = props => {
             <hr/>
             <Icon icon={user}/>   <a id="about" className="menu-item" href="/nanaprofile/:id">My Profile</a>
             <hr/>
-            <Icon icon={clock2}/>   <a id="contact" className="menu-item" href= "/nanaprofile/:id" >My Schedule</a>
+            <Icon icon={clock2}/>   <a id="contact" className="menu-item" href= "/schedule" >My Schedule</a>
             <hr/> 
            {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
            </nav>

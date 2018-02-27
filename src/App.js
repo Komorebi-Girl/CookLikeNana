@@ -6,6 +6,7 @@ import NanaProfile from "./components/NanaProfile";
 import NanaRegister from "./components/NanaRegister";
 import UserRegister from "./components/UserRegister";
 import UserProfile from "./components/UserProfile";
+import SchedulePage from "./pages/SchedulePage";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
@@ -26,6 +27,7 @@ return (
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/login" component={LoginPage} />
       <Route exact path="/search" component={SearchPage} />
+      <Route exact path="/schedule" component={SchedulePage} />
       <Route path="/nana_register" component={NanaRegister} />
       <Route path="/user_register" component={UserRegister} />
       <Route path="/nanaprofile/:id" component={NanaProfile} />

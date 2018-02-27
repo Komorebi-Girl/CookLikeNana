@@ -25,10 +25,10 @@ const Section1 = props => (
       
         <div className="Grid">
         <div className="row">
-        <Col s={12} md={6}>
+        <Col s={12} md={4}>
           <h6>Calling all grandmas: we need your help</h6>
             </Col>
-            <Col s={12} md={6}>
+            <Col s={12} md={8}>
          <h5> As a cook at Cook With Nana, you 
              can teach new generations of home-chefs while making side-money. Once your profile is created in the sign-up page and your hourly rates and schedules are set, you're ready to 
              meet them and share your cooking wisdom!</h5>

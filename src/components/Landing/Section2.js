@@ -22,10 +22,10 @@ const Section2 = props => (
      <div style={insideStyles}>
      <div className="Grid">
          <div className="row">
-         <Col s={12} md={5} l={6}>
+         <Col s={12} md={6} l={4}>
 		  <h6>Learn to cook from true experts: Grandmas</h6>
 		     </Col>
-             <Col s={12} md={5} l={6}>
+             <Col s={12} md={6} l={8}>
              <h5 className="sectionbod"> Tired of constant microwaving? No idea where to start on a home-cooked meal? Avoid the hassle of
                endless Googling by signing up to meet a grandma with experience in a cuisine you want to learn more
                about preparing. From baking to traditional Italian food, get a real "taste" of home-cooking while learning
