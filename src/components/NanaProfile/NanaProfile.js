@@ -11,7 +11,6 @@ class NanaProfile extends Component {
     image: "https://c1.staticflickr.com/4/3275/2918869494_7e93a0ec3e_n.jpg",
     specialties: "Italian",
     bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minima, repudiandae ex explicabo distinctio praesentium magnam velit inventore optio, dignissimos fuga, ipsum quos vero consequuntur! Voluptate cumque culpa eum nisi!"
-
   }
 
  componentDidMount(){
@@ -19,12 +18,12 @@ class NanaProfile extends Component {
  } 
 
   render(){
-    return(	<div className="container">
+    return(<div className="container">
 		<div className="row">
 
 			<div className="col-md-4">
 				<div className="thumbnail">
-      				<img src={this.state.image} alt="grandma"></img>
+      		<img src={this.state.image} alt="grandma"></img>
     		</div>
 		  </div>
 
@@ -37,14 +36,15 @@ class NanaProfile extends Component {
 				<p>{this.state.bio}</p>
 				<button type="button" className="btn btn-primary">Make An Appointment With Me!</button>
 			</div>
-		</div>
+
+    </div>
 
     <div className="row">
       <div className="col-md-8">
-        <Calendar/>
-      <div>
-    <div>
-
+        <Calendar nanaid={this.props.match.params.id}/>
+      </div>
+    </div>
+    
 	</div>)}  
 };
 
