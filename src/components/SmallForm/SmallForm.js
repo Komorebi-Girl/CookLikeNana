@@ -10,6 +10,8 @@ import Panel from 'react-bootstrap/lib/Panel';
 import {Input} from 'semantic-ui-react';
 import "./SmallForm.css";
 
+
+//============
 class SmallForm extends Component {
   state = {
     result: {}
@@ -54,22 +56,26 @@ class SmallForm extends Component {
   };
 
   render() {
-
     console.log(this.props);
     return (
-<div className="login" style={{'height': '100vh'}} > <br></br>
-      <div className="login-bg">
 
+
+<div className="login" style={{'height': '100vh'}} > <br></br>
+
+
+      <div className="login-bg">
         <div className="Panel">
           <form action="/api/signup" method="post">
             <div>Email</div>
-            <Input type="text" name="email" onChange={this.handleInputChange}></Input>
+
+            <Input type="text" name="email" id="password" onChange={this.handleInputChange}></Input>
             <div>Password</div> 
             
-            <Input type="text" name="password" onChange={this.handleInputChange}></Input>
+            <Input type="password" name="password" onChange={this.handleInputChange}></Input>
             <br></br>
             <input
-              className="btn submit"
+              className="btn"
+              id="login-btn"
               type="submit"
               value="Submit"
               onClick={this.handleFormSubmit}
