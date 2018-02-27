@@ -1,0 +1,15 @@
+.navbar .navbar-expand-lg .navbar-light .bg-light {
+    /* position: fixed; */
+}
+.bg-light {
+    height: 90px;
+    box-shadow: 0 0 8px 1px #8080808f;
+    top: 0;
+}
+
+#navContainer {
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    
+}

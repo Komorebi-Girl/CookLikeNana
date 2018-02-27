@@ -3,7 +3,6 @@ import API from "../../utils/API";
 import Container from "../../components/Container";
 import { Input, FormBtn } from "../../components/Form";
 import Cards from "./Cards";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class Search extends Component {
   state = {

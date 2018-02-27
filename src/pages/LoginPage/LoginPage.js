@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import SmallForm from "../../components/SmallForm";
 import Container from "../../components/Container";
-
+import "../../components/SmallForm/SmallForm.css";
 class SearchPage extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div>
+      {/* <Container fluid> */}
         <SmallForm/>
-      </Container>
+      {/* </Container> */}
+      </div>
     );
   }
 }

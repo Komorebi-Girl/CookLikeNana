@@ -6,32 +6,37 @@ import NanaProfile from "./components/NanaProfile";
 import NanaRegister from "./components/NanaRegister";
 import UserRegister from "./components/UserRegister";
 import UserProfile from "./components/UserProfile";
+import SchedulePage from "./pages/SchedulePage";
 import LoginPage from "./pages/LoginPage";
-import Landing from "./pages/Landing/Landing";
+import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
+import PreComponent from "./components/PreComponent";
 
 // authenticate = userInfo => {
 //   this.setState({userInfo})
 // }
 
-const App = () =>
-  <Router>
-    <div>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/nanas" component={SearchPage} />
-        <Route exact path="/nana" component={NanaRegister} />
-        <Route exact path="/user" component={UserRegister} />
-        <Route path="/nana/:id" component={NanaProfile} />
-        <Route path="/user/:id" component={UserProfile} />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>
-  </Router>
+const App = () => {
 
-    
+return (
+ <Router>
+   <div>
+    <NavBar />
+    <PreComponent />
+    <Switch>
+      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/login" component={LoginPage} />
+      <Route exact path="/nanas" component={SearchPage} />
+      <Route exact path="/nana" component={NanaRegister} />
+      <Route exact path="/user" component={UserRegister} />
+      <Route path="/nana/:id" component={NanaProfile} />
+      <Route path="/user/:id" component={UserProfile} />
+      <Route component={NoMatch} />
+    </Switch>
+   </div>
+</Router>);
+}
+
 export default App;
 
 
