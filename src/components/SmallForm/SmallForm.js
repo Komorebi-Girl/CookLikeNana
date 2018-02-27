@@ -64,13 +64,10 @@ class SmallForm extends Component {
 
 
       <div className="login-bg">
-        <div className="Panel">
           <form action="/api/signup" method="post">
             <div>Email</div>
-
             <Input type="text" name="email" id="password" onChange={this.handleInputChange}></Input>
             <div>Password</div> 
-            
             <Input type="password" name="password" onChange={this.handleInputChange}></Input>
             <br></br>
             <input
@@ -85,8 +82,7 @@ class SmallForm extends Component {
             }}></input>
             
           </form>
-         
-        </div>
+        
         <br></br>
         Don't have an account yet? <a href="/">Sign up as a learner
         </a> OR <a href="/">Sign up as a Granny

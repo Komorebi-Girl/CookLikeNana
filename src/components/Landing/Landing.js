@@ -12,7 +12,7 @@ const style = {
   position: 'relative',
   background: '-moz-linear-gradient(45deg, rgba(174,87,179,1) 0%, rgba(228,155,235,1) 40%, rgba(255,213,158,1) 100%)',
 	background: '-webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(174,87,179,1)), color-stop(40%, rgba(228,155,235,1)), color-stop(100%, rgba(255,213,158,1)))',
-	top: -0,
+	top: -8,
   left: 0,
   zIndex: -0,
 };
