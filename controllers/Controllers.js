@@ -115,7 +115,23 @@ module.exports = {
       });
   }
 },
+  createTimeSlot: function(req, res){
+    db.Calendar.create({nanaid: req.body.nanaid, availableday: req.body.availableday, availabletime: req.body.availabletime})
+      .then(createdSlot => res.json(createdSlot))
+      .catch(err => res.status(422).json(err))
+  },
 
+  findTimeSlot: function(req, res){
+    db.Calendar.findOne({ where: {availableday: req.body.availableday, availabletime: req.body.availabletime}})
+      .then(foundSlot => res.json(foundSlot))
+      .catch(err => res.status(422).json(err))
+  },
+
+  deleteTimeSlot: function(req, res){
+    db.Calendar.destroy({ where: {nanaid: req.body.nanaid, availableday: req.body.availableday, availabletime: req.body.availabletime}})
+      .then(res.send("Slot deleted successfully"))
+      .catch(err => res.status(422).json(err))
+  },
 getUserData: function (req, res) {
   if (!req.user) {
     // The user is not logged in, send back an empty object
