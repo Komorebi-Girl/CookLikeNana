@@ -57,10 +57,17 @@ class Search extends Component {
 
   render() {
     return (
+      <div className="card-body">
+      <div className="card">
+      <div className="card-body">
       <Container style={{ maxWidth: "90%" }}>
-        <form>
+        
         <div className="row">
-				  <div className="form-group col-md-4 text-center">
+
+
+				  <div className="form-group col-md-6 offset-md-3">
+
+
               <Input type="text"
                 value={this.state.location}
                 onChange={this.handleInputChange}
@@ -69,7 +76,9 @@ class Search extends Component {
               />
           </div>
         </div>
-        <div>  
+
+        <div className="row">  
+
           <div className="form-group col-md-12 text-center">
               <input type="checkbox" id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
               <label for="italiancuisine">&nbsp;Italian Cuisine&nbsp;&nbsp;&nbsp;</label>
@@ -83,17 +92,21 @@ class Search extends Component {
               <label for="baking">&nbsp;Baking</label>
           </div>
 				</div> 
+
         <div className="row"> 
           <div class="col-md-12 text-center">   
             <button type="button" className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
           </div>
         </div>
-        </form>
+        
         <div className="container" style={{height:"50px"}}></div>	  
         <div id="container">
           <Cards results={this.state.nanas} />
         </div>
     </Container>
+    </div>
+    </div>
+    </div>
     );
   }
 }

@@ -82,9 +82,11 @@ class NanaRegister extends Component {
   } 
   };
 
+
+
   render() {
     return (
-      <Container style={{ minHeight: "80%" }}>
+      <div style= {{"background-color":"#FFC0D0"}} className="container">
         <div className="card">
 			<h5 className="card-header">Nana Registration</h5>
 			<div className="card-body">
@@ -176,7 +178,8 @@ class NanaRegister extends Component {
 				</form>
 			</div>
 		</div>
-      </Container>
+	</div>
+      
     );
   }
 }

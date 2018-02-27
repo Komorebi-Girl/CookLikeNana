@@ -79,7 +79,7 @@ class UserRegister extends Component {
 
   render() {
     return (
-      <Container style={{ minHeight: "80%" }}>
+      <Container style= {{"background-color":"#FFC0D0"}}>
 			<div className="card">
 			<h5 className="card-header">User Registration</h5>
 			<div className="card-body">
