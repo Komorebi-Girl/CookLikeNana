@@ -9,8 +9,7 @@ class NanaAvailability extends Component {
 
 	componentDidMount() {
 
-        // API.getNanaCalendar(this.props.results.nanaid)
-		API.getNanaCalendar(1)
+        API.getNanaCalendar(this.props.results)
             .then(res => {
                 console.log(JSON.stringify(res.data));
                 this.setState({nanacalendar: res.data })

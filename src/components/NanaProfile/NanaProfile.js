@@ -35,9 +35,8 @@ class NanaProfile extends Component {
 					<p>Italian, Southern, Baking</p>
 					<h4>About Me:</h4>
 					<p>{this.state.nana.bio}</p>
-					{/* <button type="button" className="btn btn-primary">Make An Appointment With Me!</button> */}
-					<h4>Nana's Availability</h4>
-			    <NanaAvailability results={this.state.nana} />		
+					<h4>Nana's Availability:</h4>
+			    <NanaAvailability results={this.props.match.params.id} />		
 				</div>		
 				
 			</div>
