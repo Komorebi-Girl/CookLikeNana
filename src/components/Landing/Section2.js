@@ -22,15 +22,15 @@ const Section2 = props => (
      <div style={insideStyles}>
      <div className="Grid">
          <div className="row">
-         <Col s={12} md={6}>
+         <Col s={12} md={5} l={6}>
 		  <h6>Learn to cook from true experts: Grandmas</h6>
 		     </Col>
-             <Col s={12} md={6}>
-             <p> Tired of constant microwaving? No idea where to start on a home-cooked meal? Avoid the hassle of
+             <Col s={12} md={5} l={6}>
+             <h5 className="sectionbod"> Tired of constant microwaving? No idea where to start on a home-cooked meal? Avoid the hassle of
                endless Googling by signing up to meet a grandma with experience in a cuisine you want to learn more
                about preparing. From baking to traditional Italian food, get a real "taste" of home-cooking while learning
-               how to make it happen with a new friend! </p><p>
-             <a className="btn btn-primary btn-lg" href="#" role="button">Sign up as a learner</a></p>
+               how to make it happen with a new friend! </h5><p>
+             <a className="btn btn-primary btn-lg" href="/user_register" role="button">Sign up as a learner</a></p>
             </Col>
             </div>
 

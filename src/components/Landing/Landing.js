@@ -28,7 +28,7 @@ const Landing = props => (
         <div className="header-inner">
 
  <video  loop id="myVideo" autoPlay>
-  <source src="https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_10_Videvo.mov49703.webm" />
+  <source src="https://www.videvo.net/videvo_files/converted/2014_11/preview/Baking_Cookies_Videvo.mp450092.webm" />
   Your browser does not support HTML5 video.
 </video >
         
@@ -38,10 +38,14 @@ const Landing = props => (
     <Col s={12} md={1}></Col>
       <Col s={12} md={10}>
     <h1>Welcome to Cook With Nana!</h1> 
-			<h4>	Lost college freshmen. Broke Milienials. Stressed out newly weds. When it comes to cooking, a lot of people don't know where to start. 
+			<h5>	Lost college freshmen. Broke Milienials. Stressed out newly weds. When it comes to cooking, a lot of people don't know where to start. 
              That's why we set up Cook With Nana: to help new cooks gain the knowledge to cook like pros, and nothing beats an authentic homemade meal from grandma.	 
-						 	</h4>	<br></br>
-               <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign Up Now</a></p>
+						 	</h5>	<br></br>
+               <form className="form-inline my-2 my-lg-0"  style={{'margin-left': "300px"}}>
+        <input className="form-control mr-sm-2" type="search" placeholder="Browse for Cooks" aria-label="Search"  style={{'background-color': "transparent", 
+      'color': "white"}}></input>
+	      <button className="btn btn-outline-success my-2 my-sm-0" style={{'background-color': "white"}} type="submit">GO</button>
+	    </form>
     </Col> 
     <Col s={12} md={1}></Col>
     </Row>
@@ -72,7 +76,7 @@ const Landing = props => (
 
       <section-slant>
 					<h2>How does it work?</h2>
-		 			<h4>Depending on whether you want to sign up as a cook or learner it works a bit differently:</h4>
+		 			<h5>Depending on whether you want to sign up as a cook or learner it works a bit differently:</h5>
         </section-slant>
 				</div>
 			</main>

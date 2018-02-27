@@ -10,8 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
 import PreComponent from "./components/PreComponent";
-import Section1 from "./components/Landing/Section1";
-import Section2 from "./components/Landing/Section2";
+
 // authenticate = userInfo => {
 //   this.setState({userInfo})
 // }
@@ -36,7 +35,6 @@ return (
 </Router>);
 }
 
-    
 export default App;
 
 

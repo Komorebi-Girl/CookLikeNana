@@ -5,11 +5,16 @@
     width: 36px;
     height: 30px;
     right: 36px;
-    top: 36px;
+    top: 28px;
   }
   
   .bm-burger-bars {
-    background: #373a47;
+    background: -moz-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(179,142,209,1)), color-stop(100%, rgba(245,197,177,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* w3c */
   }
   
   /* Position and sizing of clickable cross button */
@@ -24,10 +29,25 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
-    padding: 4.5em 1.5em 0;
+    background: -moz-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(179,142,209,1)), color-stop(100%, rgba(245,197,177,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(179,142,209,1) 0%, rgba(245,197,177,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5c5b1', endColorstr='#B38ED1',GradientType=1 ); /* ie6-9 */    padding: 4.5em 1.5em 0;
     font-size: 1.15em;
     text-transform: uppercase;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.247);
+  }
+  .btn {
+    color: #946288;
+    background-color: transparent;
+    background-image: none;
+    border-color: #946288;
+  }
+  .btn a hover{
+    color: white
   }
   /* .bm-menu, 	
   .nav {
@@ -52,7 +72,7 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #ffffff;
-    background-color: #373a47;
+    background-color: transparent;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
@@ -66,7 +86,7 @@
     width: 100%;
   }
   .nav li {
-    float:left;
+    float: left;
     display:inline;
     padding:5px 10px;
     /* the tiny border */
@@ -88,10 +108,22 @@
     border-radius:5px/25px;
     opacity:0.5;
   }
-  
+  .btn-primary {
+    color: #fff;
+		background-color:transparent;
+		border-color: #ffffff;
+
+}
+
+.btn-primary {
+		color: #fff;
+		border-width: 2px;
+		background-color:transparent;
+		border-color: #ffffff;
+}
   /* the hover effect */
   .nav a:hover {
-    background-color:#22242ed5;
+    background-color:#b38ed1;
     opacity: 0;
     color:white;
     opacity:1;
@@ -102,17 +134,18 @@
  
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
-    fill: #373a47;
+    fill: #b38ed1;
+   
   }
   
   /* Wrapper for item list */
   .bm-item-list {
-    color: #b8b7ad;
+    color: #ffffff;
     padding: 0.8em;
     
   }
   
   /* Styling of overlay */
   .bm-overlay {
-    background: rgba(0, 0, 0, 0.726);
+    background: rgba(0, 0, 0, 0.74);
   }

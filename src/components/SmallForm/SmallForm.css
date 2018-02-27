@@ -1,0 +1,46 @@
+.container-fluid {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+ .login-bg {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 300px;
+    padding: 14px;
+    border-radius: 15px;
+    box-shadow: 3px 5px 3px 0px #8080807a;
+
+ }
+
+ .login {
+    background-image: url("https://images.unsplash.com/photo-1490367605959-06955305859b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5de01f766b384920838ede2e505a8418&auto=format&fit=crop&w=1650&q=80");
+    /* Full height */
+    HEIGHT: 30%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.btn{
+
+    background-color: transparent;
+    background-image: none;
+    border-color: #946288;
+    width: 200px;
+}
+input {
+    width: 100%;
+    margin-bottom: 1px;
+}
+a {
+    color:#f58984;
+}
+a:hover {
+    text-decoration: none;
+    color: #946288;
+}

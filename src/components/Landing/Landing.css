@@ -6,7 +6,10 @@
 
 	/* background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(254,199,255,0.5)), color-stop(100%, rgba(255,207,153,1))); */
 }
+/* body {
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(254,199,255,0.5)), color-stop(100%, rgba(255,207,153,1))); 
 
+} */
 .section {
 	padding: 29px;
 	color: #FFFFFF;
@@ -18,12 +21,18 @@
 }
 h1{
 	font-family: 'Abril Fatface', cursive;
-	font-size: 40px;
+	font-size: 2em
+}
+h5{
+	font-size: 1.2em
+}
+.sectionbod {
+	text-shadow: .5px .5px gray;
 }
 h6{
 	font-family: 'Abril Fatface', cursive;
 	text-shadow: 1px 1px gray;
-	font-size: 40px;
+	font-size: 2em
 }
 /* section slant */
 
@@ -106,21 +115,16 @@ html {
   }
   .btn-primary {
     color: #fff;
+		background-color:transparent;
+		border-color: #ffffff;
 
-		border-color: #aed6e7;
-	/* a  {
-		color: #fac7ff;
-		text-decoration: none;
-		background-color: transparent;
-		-webkit-text-decoration-skip: objects;
-	} */
 }
 
 .btn-primary {
-    color: #fff;
-	
-		border-color: #aed6e7;
-	box-shadow: 1px 1px 2px ;
+		color: #fff;
+		border-width: 2px;
+		background-color:transparent;
+		border-color: #ffffff;
 }
 
 #myVideo {
@@ -140,3 +144,7 @@ html {
 	text-shadow: 1px 1px gray;
 	left: 0;
 }
+/* @media (min-width: 768px) h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 40px;
+} */
