@@ -51,6 +51,7 @@ class NanaRegister extends Component {
       .then(res => {
 				console.log(res);
 				this.setState({ nana: res.data});
+				alert("Thanks for signing up. Your profile has been successfull created");
 				this.props.history.push({
 					// pathname: `/nana/${res.data}`
 					pathname: "/nana/" + res.data.profileid

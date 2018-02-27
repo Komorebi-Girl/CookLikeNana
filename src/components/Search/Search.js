@@ -60,12 +60,12 @@ class Search extends Component {
       <Container style={{ maxWidth: "90%" }}>
         <form>
         <div className="row">
-				  <div className="form-group col-md-6 col-md-offset-3">
-              <Input trpe="text"
+				  <div className="form-group col-md-4 text-center">
+              <Input type="text"
                 value={this.state.location}
                 onChange={this.handleInputChange}
                 name="location"
-                placeholder="Location (required)"
+                placeholder="Location (Required)"
               />
           </div>
         </div>
