@@ -10,9 +10,28 @@ export default {
   grabUserData: function(){
     return axios.post("/api/getuserdata");
   },
+
+  findTimeSlot: function(day, time){
+    return axios.post("/api/findtimeslot", {availableday:day, availabletime:time})
+  },
+
+  createTimeSlot: function(day, time, id){
+    return axios.post("/api/createtimeslot", {nanaid:id, availableday:day, availabletime:time})
+  },
+
+  deleteTimeSlot: function(day, time, id){
+    return axios.post("/api/deletetimeslot", {nanaid:id, availableday:day, availabletime:time})
+  },
+    
   getNanabyID: function(id) {
     return axios.get("/api/nana/" + id);
   },  
+  getUserbyID: function(id) {
+    return axios.get("/api/user/" + id);
+  },
+  getNanaCalendar: function(id) {
+    return axios.get("/api/nanacalendar/" + id);
+  },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);
