@@ -31,6 +31,7 @@ return (
       <Route exact path="/user" component={UserRegister} />
       <Route path="/nana/:id" component={NanaProfile} />
       <Route path="/user/:id" component={UserProfile} />
+      <Route path="/schedule" component={SchedulePage} />
       <Route component={NoMatch} />
     </Switch>
    </div>

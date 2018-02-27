@@ -23,7 +23,7 @@ const Hamburger = props => {
     
             <Icon icon={home}/>   <a id="home" className="menu-item" href="/" >Home  </a>    
             <hr/>
-            <Icon icon={user}/>   <a id="about" className="menu-item" href="/nanaprofile/:id">My Profile</a>
+            <Icon icon={user}/>   <a id="about" className="menu-item" href="/nana/:id">My Profile</a>
             <hr/>
             <Icon icon={clock2}/>   <a id="contact" className="menu-item" href= "/schedule" >My Schedule</a>
             <hr/> 
