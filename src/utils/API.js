@@ -16,6 +16,9 @@ export default {
   getUserbyID: function(id) {
     return axios.get("/api/user/" + id);
   },
+  getNanaCalendar: function(id) {
+    return axios.get("/api/nanacalendar/" + id);
+  },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);

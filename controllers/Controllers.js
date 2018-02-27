@@ -81,6 +81,24 @@ module.exports = {
     .catch(err => res.status(422).json(err));
   },
 
+  findNanaCalendar: function(req, res) {
+    console.log("Displaying Calendar");
+    console.log(req.params.id);
+    db.Calendar.findAll({
+      where: {
+        nanaid: req.params.id
+      }
+    })
+      .then(dbModel => {
+        console.log('data in findAll: ', dbModel)
+        res.json(dbModel);
+      })
+      .catch(err => {
+        console.log('Error in findAll: ', err);
+        res.status(422).json(err);
+      });
+  },
+
   getNanaData: function (req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object

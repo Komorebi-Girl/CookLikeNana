@@ -3,14 +3,6 @@ import "./Profile.css";
 import API from "../../utils/API";
 
 class UserProfile extends Component {
-  // state = {
-  //   fullname: "NewUser",
-  //   location: "Somewhere, FL",
-  //   image: "http://unmr-nl.science.uu.nl/sites/default/files/user_placeholder_man_0.jpg",
-  //   preferences: "Italian",
-  //   bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab minima, repudiandae ex explicabo distinctio praesentium magnam velit inventore optio, dignissimos fuga, ipsum quos vero consequuntur! Voluptate cumque culpa eum nisi!"
-
-	// }
 	
 	state = {
     user: {}
