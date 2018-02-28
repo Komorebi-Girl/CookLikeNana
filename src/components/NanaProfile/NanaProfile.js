@@ -40,9 +40,6 @@ class NanaProfile extends Component {
 
   render(){
 		let profileAddon=""; 
-		console.log("params = " + this.props.match.params.id);
-		console.log("profile id = " + this.state.nanainfo.profileid);
-		console.log("nana id = " + this.state.nana.nanaid);
 		if(this.props.match.params.id == this.state.nanainfo.profileid) 
 		{
 			profileAddon = <Calendar nanaid={this.props.match.params.id}/>		
@@ -64,6 +61,24 @@ class NanaProfile extends Component {
 			<div style={{height: 200}}>
 			<div style={insideStyles}>
 
+		<div className="container">
+			<div className="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+								<img src={this.state.nana.profileimage} alt="grandma" className="profilephoto"></img>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<h1 style={{"text-decoration": "none", "text-shadow": "none"}}>{this.state.nana.firstname}&nbsp;{this.state.nana.lastname}</h1>
+					<p>{this.state.nana.location}</p>
+					<h4>Cooking Specialties:</h4>
+					<p>Italian, Southern, Baking</p>
+					<h4>About Me:</h4>
+					<p>{this.state.nana.bio}</p>
+					<h4>Nana's Availability:</h4>
+			    {profileAddon}	
+				</div>		
+				
 			</div>
 			</div> 
 			</Parallax>

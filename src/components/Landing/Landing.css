@@ -21,10 +21,23 @@
 }
 h1{
 	font-family: 'Abril Fatface', cursive;
-	font-size: 2em
+  font-size: 3em;
+  margin-bottom: 25px;
 }
+
+.mainHeader {
+  text-decoration: underline;
+  text-shadow: 2px 2px #946288;
+}
+.summary {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #946288;
+}
+
 h5{
-	font-size: 1.1em
+  font-size: 1.6em;
+  text-align: justify;
 }
 .sectionbod {
 	text-shadow: .5px .5px gray;
@@ -118,9 +131,16 @@ html {
 		color: gray;
 		border-width: 2px;
 		background-color: #f58984;
-		border-color: #ffffff;
+    border-color: #ffffff;
+    margin-top:20px;
 }
 
+.btn-outline-success {
+    height: 52px;
+    width: 303px;
+    font-size: 1.6em;
+    background-color: white;
+}
 #myVideo {
 	position: fixed;
 	right: 0;

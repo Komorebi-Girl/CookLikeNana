@@ -12,10 +12,6 @@ import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
 import PreComponent from "./components/PreComponent";
 
-// authenticate = userInfo => {
-//   this.setState({userInfo})
-// }
-
 const App = () => {
 
 return (
