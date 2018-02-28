@@ -2,6 +2,16 @@
 .profile-photo {
 	background-image: url("https://c1.staticflickr.com/4/3275/2918869494_7e93a0ec3e_n.jpg");
 	background-size: contain;
-	max-width: 200px;
+	background-repeat: no-repeat;
+
+	border-radius: 15px;
 }
 
+.apptbox {
+	background-color: white;
+	max-width: 90%;
+    margin: 0 auto;
+    padding: 14px;
+    border-radius: 15px;
+    box-shadow: 3px 5px 3px 0px #8080807a;
+ }
