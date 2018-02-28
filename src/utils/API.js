@@ -19,6 +19,15 @@ export default {
   getNanaCalendar: function(id) {
     return axios.get("/api/nanacalendar/" + id);
   },
+  saveBooking: function(savebooking) {
+    return axios.post("/api/savebooking", savebooking);
+  },
+  deleteBooking: function(deletebooking) {
+    return axios.post("/api/deletebooking", deletebooking);
+  },
+  getBookings: function(id) {
+    return axios.get("/api/bookings/" + id);
+  },
   getNanas: function(searchparams) {
     console.log("Search Parameters");
     console.log(searchparams);

@@ -2,24 +2,41 @@ import React, { Component } from "react";
 import "./Profile.css";
 import API from "../../utils/API";
 import NanaAvailability from "../../components/NanaAvailability";
+import Calendar from "../Calendar";
 
 class NanaProfile extends Component {	
 
   state = {
 		nana: {},
-		nanacalendar: {}
+		nanainfo: {}
   };
 
   componentDidMount() {
-
-    API.getNanabyID(this.props.match.params.id)
+    Promise.all([API.getNanabyID(this.props.match.params.id), API.grabNanaData()])
       .then(res => {
-		  this.setState({nana: res.data });
+        this.setState({
+          nana: res[0].data,
+          nanainfo:res[1].data 
+        });
 	  })
-	  .catch(err => console.log(err));	
+		.catch(err => console.log(err));
   } 
 
   render(){
+		let profileAddon=""; 
+		if(this.props.match.params.id == this.state.nanainfo.profileid) 
+		{
+			profileAddon = <Calendar nanaid={this.props.match.params.id}/>		
+		} 
+		else if (typeof this.state.nana.nanaid === 'undefined') 
+		{
+			profileAddon = <NanaAvailability results={this.props.match.params.id} />
+		}
+		else
+		{
+			profileAddon = "Please login to see Nana's Availability"
+		}
+
     return(	
 		<div className="container">
 			<div className="row">
@@ -36,7 +53,7 @@ class NanaProfile extends Component {
 					<h4>About Me:</h4>
 					<p>{this.state.nana.bio}</p>
 					<h4>Nana's Availability:</h4>
-			    <NanaAvailability results={this.props.match.params.id} />		
+			    {profileAddon}	
 				</div>		
 				
 			</div>

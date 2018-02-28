@@ -10,7 +10,16 @@ router.route("/nana/:id")
   .get(Controller.findNanaById);  
 
 router.route("/nanacalendar/:id")
-  .get(Controller.findNanaCalendar);    
+  .get(Controller.findNanaCalendar);  
+   
+router.route("/savebooking")
+  .post(Controller.saveBooking); 
+  
+router.route("/deletebooking")
+  .post(Controller.deleteBooking);    
+
+router.route("/bookings/:id")
+  .get(Controller.findBookings);     
 
 router.route("/user/:id")
   .get(Controller.findUserById);  
@@ -30,7 +39,6 @@ router.route("/login")
     res.send(req.user);
   });  
   
-
 router.route("/logout")
   .post(Controller.userLogout);
 

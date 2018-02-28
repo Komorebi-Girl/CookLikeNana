@@ -99,6 +99,55 @@ module.exports = {
       });
   },
 
+  saveBooking: function(req, res) {
+    console.log("Saving Booking");
+    db.Booking.create({
+      nanaid: req.body.nanaid,
+      userid: req.body.userid,
+      day: req.body.day,
+      time: req.body.time
+    })
+      .then(dbModel => {
+        res.json(dbModel);
+      })
+      .catch(err => {
+        console.log('Error in findAll: ', err);
+        res.status(422).json(err);
+      });
+  },
+
+  deleteBooking: function(req, res) {
+    console.log("Deleting Booking");
+    db.Booking.destroy({
+      where: {
+        nanaid: req.body.nanaid,
+        userid: req.body.userid,
+        day: req.body.day,
+        time: req.body.time
+      }
+    })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
+  findBookings: function(req, res) {
+    console.log("Displaying Bookings");
+    console.log(req.params.id);
+    db.Booking.findAll({
+      where: {
+        userid: req.params.id
+      }
+    })
+      .then(dbModel => {
+        console.log('data in findAll: ', dbModel)
+        res.json(dbModel);
+      })
+      .catch(err => {
+        console.log('Error in findAll: ', err);
+        res.status(422).json(err);
+      });
+  },
+
   getNanaData: function (req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
@@ -107,7 +156,7 @@ module.exports = {
     else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      db.Nana.findOne({where: {email: req.user.email}})
+      db.Login.findOne({where: {email: req.user.email}})
       .then(foundNana => res.json(foundNana))
       .catch(err => {
         console.log('Error in findAll: ', err);
@@ -124,7 +173,7 @@ getUserData: function (req, res) {
   else {
     // Otherwise send back the user's email and id
     // Sending back a password, even a hashed password, isn't a good idea
-    db.User.findOne({where: {email: req.user.email}})
+    db.Login.findOne({where: {email: req.user.email}})
     .then(foundUser => res.json(foundUser))
     .catch(err => {
       console.log('Error in findAll: ', err);
