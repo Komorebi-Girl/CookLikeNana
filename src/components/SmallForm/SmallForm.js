@@ -11,7 +11,6 @@ import {Input} from 'semantic-ui-react';
 import "./SmallForm.css";
 
 
-//============
 class SmallForm extends Component {
   state = {
     result: {}
@@ -33,27 +32,26 @@ class SmallForm extends Component {
     event.preventDefault();
     const yourEmail = this.state.email;
     const yourPassword = this.state.password;
-    API
-      .checkLogin(yourEmail, yourPassword)
-      .then(({data}) => {
-        console.log(data);
-        console.log(this.props)
-        if (data.usertype === "2") {
-          this
-            .props
-            .history
-            .push({pathname: `/userprofile/${data.id}`})
-        } else if (data.usertype === "1") {
-          this
-            .props
-            .history
-            .push({pathname: `/nanaprofile/${data.id}`})
-        }
-      })
-      .catch(err => {
-        console.log('Error: ', err);
-      });
+    API.checkLogin(yourEmail, yourPassword)
+    .then(({ data }) => {
+      console.log(data);
+      console.log(this.props)
+      if(data.usertype == "2"){
+        this.props.history.push({
+          pathname: `/user/${data.profileid}`
+        })
+      }
+      else if (data.usertype == "1"){
+        this.props.history.push({
+          pathname: `/nana/${data.profileid}`
+        })   
+      }
+    })
+    .catch(err => {
+      console.log('Error: ', err);
+    });
   };
+
 
   render() {
     console.log(this.props);
@@ -62,12 +60,14 @@ class SmallForm extends Component {
 
 <div className="login" style={{'height': '100vh'}} > <br></br>
 
-
       <div className="login-bg">
+        <div className="Panel">
           <form action="/api/signup" method="post">
             <div>Email</div>
+
             <Input type="text" name="email" id="password" onChange={this.handleInputChange}></Input>
             <div>Password</div> 
+            
             <Input type="password" name="password" onChange={this.handleInputChange}></Input>
             <br></br>
             <input
@@ -82,7 +82,8 @@ class SmallForm extends Component {
             }}></input>
             
           </form>
-        
+         
+        </div>
         <br></br>
         Don't have an account yet? <a href="/">Sign up as a learner
         </a> OR <a href="/">Sign up as a Granny
