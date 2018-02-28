@@ -2,7 +2,7 @@ import React from "react";
 import "./ApptCard.css";
 
 const ApptCard = props => (
-	<div className="container">
+	<div className="apptcard" style={{'height': '100vh'}} >
 		<div className="row">
 			<div className="col-md-4 profile-photo">
 			  
