@@ -94,7 +94,7 @@ class Search extends Component {
 
         <div className="row"> 
           <div class="col-md-12 text-center">   
-            <button type="button" className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
+            <button type="button" className="btn btn-success" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
           </div>
         </div>
         

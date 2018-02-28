@@ -30,7 +30,7 @@ const Section2 = props => (
                endless Googling by signing up to meet a grandma with experience in a cuisine you want to learn more
                about preparing. From baking to traditional Italian food, get a real "taste" of home-cooking while learning
                how to make it happen with a new friend! </h5><p>
-             <a className="btn btn-primary btn-lg" href="/user_register" role="button">Sign up as a learner</a></p>
+             <a className="btn btn-primary btn-lg" href="/user" role="button">Sign up as a learner</a></p>
             </Col>
             </div>
 
