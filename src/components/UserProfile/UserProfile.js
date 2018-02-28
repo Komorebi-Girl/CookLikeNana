@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import "./Profile.css";
 import API from "../../utils/API";
+import Appointments from "../../components/Appointments";
 
-class UserProfile extends Component {
-	
+class UserProfile extends Component {	
 	state = {
-    user: {}
+	user: {},
+	booking: {}
   };
 
  componentDidMount(){
-		API.getUserbyID(this.props.match.params.id)
+
+	API.getUserbyID(this.props.match.params.id)
 		.then(res => this.setState({user: res.data }))
 		.catch(err => console.log(err));
  } 
@@ -31,10 +33,13 @@ class UserProfile extends Component {
 				<p>Italian, Southern, Baking</p>
 				<h4>About Me:</h4>
 				<p>{this.state.user.bio}</p>
+				<h4>Your Appointments:</h4>
+			    <Appointments results={this.props.match.params.id} />	
 			</div>
-
+            
 		</div>
-	</div>)}  
+	</div>
+	)}  
 };
 
 export default UserProfile;
