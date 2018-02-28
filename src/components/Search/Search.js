@@ -3,7 +3,10 @@ import API from "../../utils/API";
 import Container from "../../components/Container";
 import SearchResults from "../SearchResults";
 import { Input, FormBtn } from "../../components/Form";
-
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import "./Search.css";
 class Search extends Component {
   state = {
     nanas: [],
@@ -57,39 +60,51 @@ class Search extends Component {
 
   render() {
     return (
-      <Container style={{ minHeight: "80%" }}>
+      <div className="searchbox">
+  <Grid>
+    <Row>
+    <Col s={8} md={11}>
         <form>
               <Input
                 value={this.state.location}
                 onChange={this.handleInputChange}
                 name="location"
                 placeholder="Location (required)"
-              />
-              <Input
-                value={this.state.date}
-                onChange={this.handleInputChange}
-                name="date"
-                placeholder="Date (required)"
-              />
-              <input type="checkbox" id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
-              <label for="italiancuisine"> Italian Cuisine</label>
-              <input type="checkbox" id="southerncuisine" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}/>
-              <label for="southerncuisine"> Southern Cuisine</label>
-              <input type="checkbox" id="hispaniccuisine" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}/>
-              <label for="hispaniccuisine"> Hispanic Cuisine</label>
-              <input type="checkbox" id="vegetarianvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}/>
-              <label for="vegcuisine"> Vegetarian/Vegan Cuisine</label>
-              <input type="checkbox" id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}/>
-              <label for="baking"> Baking</label>
+                className="searchbar-main"
+              /> 
+              </form> </Col>
+              <Col s={4} md={1}>
               <FormBtn
                 disabled={!(this.state.location && this.state.date)}
                 onClick={this.loadNanas}
+                button type="button"
               >
               Search
               </FormBtn>
+              </Col>
+                </Row>
+                </Grid>
+                <Row>
+              <form  style={{'margin': '0 auto'}}>
+              <input type="checkbox" style={{'max-width': '20px'}} id="italiancuisine" name="italiancuisine"
+               value={this.state.italiancuisine} onChange={this.handleInputChange}/><label for="italiancuisine"> Italian Cuisine</label>
+              
+              <input type="checkbox" style={{'max-width': '20px'}} id="southerncuisine" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}/>
+              <label for="southerncuisine"> Southern Cuisine</label>
+
+              <input type="checkbox" style={{'max-width': '20px'}} id="hispaniccuisine" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}/>
+              <label for="hispaniccuisine"> Hispanic Cuisine</label>
+
+                 <input type="checkbox" style={{'max-width': '20px'}} id="vegetarianvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}/>
+               <label for="vegcuisine"> Vegetarian/Vegan Cuisine</label>
+
+              <input type="checkbox"  style={{'max-width': '20px'}} id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}/>
+              <label for="baking"> Baking</label>
+              
             </form>
+         </Row>
         <SearchResults results={this.state.nanas} />
-      </Container>
+      </div>
     );
   }
 }
