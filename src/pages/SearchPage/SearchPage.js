@@ -6,9 +6,7 @@ class SearchPage extends Component {
 
   render() {
     return (
-      <Container fluid>
         <Search/>
-      </Container>
     );
   }
 }

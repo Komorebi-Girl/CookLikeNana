@@ -4,6 +4,10 @@ import Container from "../../components/Container";
 import { Input, FormBtn } from "../../components/Form";
 import Cards from "./Cards";
 
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import "./Search.css";
 class Search extends Component {
   state = {
     nanas: [],
@@ -61,40 +65,37 @@ class Search extends Component {
       <div className="card-body">
       <Container style={{ maxWidth: "90%" }}>
         
-        <div className="row">
-
-
-				  <div className="form-group col-md-6 offset-md-3">
-
+        <div className="row" >
 
               <Input type="text"
                 value={this.state.location}
                 onChange={this.handleInputChange}
                 name="location"
                 placeholder="Location (Required)"
-              />
-          </div>
+                style={{'width':'800px', 'margin-left': '100px;'}}
+              /><button type="button" style={{'height':'40px'}} className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
         </div>
 
-        <div className="row">  
+        <div className="row" style={{'width': '800px'}}>  
 
           <div className="form-group col-md-12 text-center">
-              <input type="checkbox" id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
+              <input type="checkbox"  style={{'width':'20px'}} id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
               <label for="italiancuisine">&nbsp;Italian Cuisine&nbsp;&nbsp;&nbsp;</label>
-              <input type="checkbox" id="southerncuisine" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}/>
+              <input type="checkbox"  style={{'width':'20px'}} id="southerncuisine" name="southerncuisine" value={this.state.southerncuisine} onChange={this.handleInputChange}/>
               <label for="southerncuisine">&nbsp;Southern Cuisine&nbsp;&nbsp;&nbsp;</label>
-              <input type="checkbox" id="hispaniccuisine" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}/>
+              <input type="checkbox"  style={{'width':'20px'}} id="hispaniccuisine" name="hispaniccuisine" value={this.state.hispaniccuisine} onChange={this.handleInputChange}/>
               <label for="hispaniccuisine">&nbsp;Hispanic Cuisine&nbsp;&nbsp;&nbsp;</label>
-              <input type="checkbox" id="vegetarianvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}/>
+              <input type="checkbox"  style={{'width':'20px'}} id="vegetarianvegan" name="vegetarianvegan" value={this.state.vegetarianvegan} onChange={this.handleInputChange}/>
               <label for="vegcuisine">&nbsp;Vegetarian/Vegan Cuisine&nbsp;&nbsp;&nbsp;</label>
-              <input type="checkbox" id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}/>
+              <input type="checkbox"  style={{'width':'20px'}} id="baking" name="baking" value={this.state.baking} onChange={this.handleInputChange}/>
               <label for="baking">&nbsp;Baking</label>
+              
           </div>
 				</div> 
 
         <div className="row"> 
           <div class="col-md-12 text-center">   
-            <button type="button" className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
+            
           </div>
         </div>
         
