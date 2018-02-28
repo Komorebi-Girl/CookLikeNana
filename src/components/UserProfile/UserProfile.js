@@ -27,7 +27,7 @@ class UserProfile extends Component {
 		  </div>
 
 			<div class="col-md-8">
-				<h1>{this.state.user.fullname}</h1>
+				<h1 style={{"text-decoration": "none", "text-shadow": "none"}}>{this.state.user.fullname}</h1>
 				<p>{this.state.user.location}</p>
 				<h4>Cuisine Preferences:</h4>
 				<p>Italian, Southern, Baking</p>
