@@ -8,7 +8,7 @@ import NanaProfile from "../NanaProfile";
 import NanaRegister from "../NanaRegister";
 import UserRegister from "../UserRegister";
 import UserProfile from "../UserProfile";
-import LoginPage from "/Users/erinrizal/class/CookWithNana/src/pages/LoginPage";
+import LoginPage from "../../pages/LoginPage";
 import {NavItem, Navbar, Nav, MenuItem} from "react-bootstrap";
 
 const NavBar = props => (

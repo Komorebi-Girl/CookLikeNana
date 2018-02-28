@@ -24,9 +24,6 @@ class NanaProfile extends Component {
 
   render(){
 		let profileAddon=""; 
-		alert("params = " + this.props.match.params.id);
-		alert("profile id = " + this.state.nanainfo.profileid);
-		alert("nana id = " + this.state.nana.nanaid);
 		if(this.props.match.params.id == this.state.nanainfo.profileid) 
 		{
 			profileAddon = <Calendar nanaid={this.props.match.params.id}/>		
@@ -49,7 +46,7 @@ class NanaProfile extends Component {
 					</div>
 				</div>
 				<div class="col-md-8">
-					<h1>{this.state.nana.firstname}&nbsp;{this.state.nana.lastname}</h1>
+					<h1 style={{"text-decoration": "none", "text-shadow": "none"}}>{this.state.nana.firstname}&nbsp;{this.state.nana.lastname}</h1>
 					<p>{this.state.nana.location}</p>
 					<h4>Cooking Specialties:</h4>
 					<p>Italian, Southern, Baking</p>

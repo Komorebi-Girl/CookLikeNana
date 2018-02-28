@@ -45,10 +45,8 @@ class UserRegister extends Component {
       .then(res => {
 				console.log("RESSSSSSSSSSS");
 				console.log(JSON.stringify(res.data));
-				alert("Thanks for signing up. Your profile has been successfull created");
 				this.setState({ user: res.data});
         this.props.history.push({
-					// pathname: `/user/${res.data}`
 					pathname: "/user/" + res.data.profileid
 			  })
 			})
