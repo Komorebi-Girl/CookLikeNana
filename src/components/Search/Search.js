@@ -76,7 +76,8 @@ class Search extends Component {
               /><button type="button" style={{'height':'40px'}} className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
         </div>
 
-        <div className="row" style={{'width': '800px'}}>  
+        <div className="row" style={{'width': '800px'
+}}>  
 
           <div className="form-group col-md-12 text-center">
               <input type="checkbox"  style={{'width':'20px'}} id="italiancuisine" name="italiancuisine" value={this.state.italiancuisine} onChange={this.handleInputChange}/>
