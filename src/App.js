@@ -10,6 +10,7 @@ import SchedulePage from "./pages/SchedulePage";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 import PreComponent from "./components/PreComponent";
 
 const App = () => {
@@ -29,9 +30,13 @@ return (
       <Route path="/user/:id" component={UserProfile} />
       <Route path="/schedule" component={SchedulePage} />
       <Route component={NoMatch} />
+      <Footer />
+
     </Switch>
    </div>
-</Router>);
+   
+</Router>
+);
 }
 
 export default App;
