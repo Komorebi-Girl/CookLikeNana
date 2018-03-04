@@ -30,9 +30,10 @@ return (
       <Route path="/user/:id" component={UserProfile} />
       <Route path="/schedule" component={SchedulePage} />
       <Route component={NoMatch} />
-      <Footer />
+   
 
     </Switch>
+    <Footer />
    </div>
    
 </Router>
