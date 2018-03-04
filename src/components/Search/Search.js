@@ -73,7 +73,7 @@ class Search extends Component {
                 name="location"
                 placeholder="Location (Required)"
                 style={{'width':'800px', 'margin-left': '100px;'}}
-              /><button type="button" style={{'height':'40px'}} className="btn btn-primary" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
+              /><button type="button" style={{'height':'40px'}} className="btn btn-primary" id="nanasearch" disabled={!(this.state.location)} onClick={this.loadNanas} >Search</button>
         </div>
 
         <div className="row" style={{'width': '800px'}}>  

@@ -19,13 +19,8 @@ const style = {
 
 
 const Landing = props => (
-<<<<<<< HEAD
 	<div>
 		<div style={style}>
-=======
-  <div>
-    <div style={style} >
->>>>>>> a74ff7f2ea332bb645a54bcb71a5c2d0d3a33c71
 
       <header className="header" id="header">
         <div className="jumbotron">
@@ -36,7 +31,6 @@ const Landing = props => (
                 <source src="https://www.videvo.net/videvo_files/converted/2014_11/preview/Baking_Cookies_Videvo.mp450092.webm" />
                 Your browser does not support HTML5 video.
 </video >
-<<<<<<< HEAD
         
 <div className="content-landing">
   <Grid style={{'background-color': 'transparent', 'color': 'white'}}>
@@ -57,31 +51,6 @@ const Landing = props => (
     </Row>
     </Grid> 
     {/* <Cover
-=======
-
-              <div className="content-landing">
-                <Grid style={{ 'background-color': 'transparent', 'color': 'white' }}>
-                  <Row>
-                    <Col s={12} md={1}></Col>
-                    <Col s={12} md={10}>
-                      <h1 className="mainHeader">Welcome to Cook With Nana!</h1>
-                      <h3 className="summary">Clueless college freshmen. Broke Millenials. Stressed out newlyweds.</h3>
-                        <h4> When it comes to cooking, a lot of people don't know where to start.That's why we set up Cook With Nana: to help newbies learn how to cook like the pros. Since nothing beats an authentic homemade meal, who better to cook with than Nana?</h4>
-						 		<br></br>
-                      <form className="form-inline my-2 my-lg-0" style={{ 'margin-left': "300px" }}>
-                        {/* <input className="form-control mr-sm-2" type="search" placeholder="Browse for Cooks" aria-label="Search" style={{
-                          'background-color': "transparent",
-                          'color': "white"
-                        }}></input> */}
-                        {/* <button className="btn btn-outline-success my-2 my-sm-0" style={{ 'background-color': "white", "text-align": "center" }} type="submit">Find Nanas In Your Area</button> */}
-                        <a className="btn btn-outline-success my-2 my-sm-0" href="/nanas" role="button">Find Nanas In Your Area</a>
-                      </form>
-                    </Col>
-                    <Col s={12} md={1}></Col>
-                  </Row>
-                </Grid>
-                {/* <Cover
->>>>>>> a74ff7f2ea332bb645a54bcb71a5c2d0d3a33c71
           videoOptions={videoOptions}
           remeasureOnWindowResize
           getResizeNotifier={resizeNotifier => {

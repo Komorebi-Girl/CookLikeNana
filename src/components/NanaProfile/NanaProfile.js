@@ -30,21 +30,28 @@ class NanaProfile extends Component {
   componentDidMount() {
     Promise.all([API.getNanabyID(this.props.match.params.id), API.grabNanaData()])
       .then(res => {
+				console.log(JSON.stringify(res[0]));
         this.setState({
           nana: res[0].data,
           nanainfo:res[1].data 
-        });
+				});
 	  })
 		.catch(err => console.log(err));
   } 
 
   render(){
 		let profileAddon=""; 
+		console.log("nana = " + JSON.stringify(this.state.nana));
+		console.log("nanainfo = " + JSON.stringify(this.state.nanainfo));
+		console.log("params = " + this.props.match.params.id);
+		console.log("profile id = " + this.state.nanainfo.profileid);
+		console.log("nana id =" + this.state.nana.nanaid);
+		
 		if(this.props.match.params.id == this.state.nanainfo.profileid) 
 		{
 			profileAddon = <Calendar nanaid={this.props.match.params.id}/>		
 		} 
-		else if (typeof this.state.nana.nanaid === 'undefined') 
+		else if (typeof this.state.nanainfo.profileid != this.state.nana.nanaid) 
 		{
 			profileAddon = <NanaAvailability results={this.props.match.params.id} />
 		}
@@ -61,24 +68,6 @@ class NanaProfile extends Component {
 			<div style={{height: 200}}>
 			<div style={insideStyles}>
 
-		<div className="container">
-			<div className="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-								<img src={this.state.nana.profileimage} alt="grandma" className="profilephoto"></img>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<h1 style={{"text-decoration": "none", "text-shadow": "none"}}>{this.state.nana.firstname}&nbsp;{this.state.nana.lastname}</h1>
-					<p>{this.state.nana.location}</p>
-					<h4>Cooking Specialties:</h4>
-					<p>Italian, Southern, Baking</p>
-					<h4>About Me:</h4>
-					<p>{this.state.nana.bio}</p>
-					<h4>Nana's Availability:</h4>
-			    {profileAddon}	
-				</div>		
-				
 			</div>
 			</div> 
 			</Parallax>
@@ -88,19 +77,20 @@ class NanaProfile extends Component {
 	<Row>
 		<Col s={12} md={4} l={4} style={{'max-width': '290px'}}>
 				<div className="thumbnail">
-      				<img className="avatar" src={this.state.image} alt="grandma"></img> 
+      				<img className="avatar" src={this.state.nana.profileimage} alt="grandma"></img> 
     		</div> 
 			</Col>
 
 			<Col s={12} md={8} l={9}>
 			<div className="profilebox">
-				<h1>{this.state.firstname}</h1>
-				<p>{this.state.location}</p>
+				<h1>{this.state.nana.firstname}</h1>
+				<p>{this.state.nana.location}</p>
 				<h4>Cooking Specialties:</h4>
-				<p>{this.state.specialties}</p>
+				<p>Italian, Southern, Baking</p>
 				<h4>About Me:</h4>
-				<p>{this.state.bio}</p>
-				<button type="button" className="btn btn-primary">Make An Appointment With Me!</button>
+				<p>{this.state.nana.bio}</p>
+				<h4>Nana's Availability:</h4>
+			    {profileAddon}	
 				</div>
 		</Col>
 	</Row>
