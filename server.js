@@ -24,19 +24,18 @@ app.use(passport.session());
 
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'build/static')));
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, './build/', 'index.html'));
-  });
-
-  // app.use(express.static(path.join(__dirname, './build/')));
-  // app.use('/login', express.static(path.join(__dirname, './build/')));
-  // app.use('/nanas', express.static(path.join(__dirname, './build/')));
-  // app.use('/nana', express.static(path.join(__dirname, './build/')));
-  // app.use('/user', express.static(path.join(__dirname, './build/')));
-  // app.use('/nana/:id', express.static(path.join(__dirname, './build/')));
-  // app.use('/user/:id', express.static(path.join(__dirname, './build/')));
-  // app.use('/schedule', express.static(path.join(__dirname, './build/')));
+  app.use('/static', express.static(path.join(__dirname, './build/static')));
+  app.use(express.static(path.join(__dirname, './build/')));
+    app.get('/', function (req, res) {
+      res.sendFile(path.join(__dirname, './build/', 'index.html'));
+    });
+  app.use('/login', express.static(path.join(__dirname, './build/')));
+  app.use('/nanas', express.static(path.join(__dirname, './build/')));
+  app.use('/nana', express.static(path.join(__dirname, './build/')));
+  app.use('/user', express.static(path.join(__dirname, './build/')));
+  app.use('/nana/:id', express.static(path.join(__dirname, './build/')));
+  app.use('/user/:id', express.static(path.join(__dirname, './build/')));
+  app.use('/schedule', express.static(path.join(__dirname, './build/')));
   }
 app.use(routes);
 
