@@ -24,7 +24,7 @@ app.use(passport.session());
 
 
 if (process.env.NODE_ENV === 'production') {
-  console.log("This is dirname", dirname)
+  console.log("This is dirname", __dirname)
   app.use(express.static(path.join(__dirname, './build/')));
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
