@@ -50,6 +50,10 @@
     "type": "git",
     "url": "git+https://github.com/Komorebi-Girl/CookWithNana.git"
   },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
