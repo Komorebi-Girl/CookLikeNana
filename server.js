@@ -22,9 +22,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, './build', 'index.html'));
-});
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, './build/')));
