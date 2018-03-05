@@ -18,13 +18,13 @@ app.use(bodyParser.json());
 // Readying app for production
 
 app.use(express.static(path.join(__dirname, './build')));
-app.use('/login', express.static(path.join(__dirname, './build'))));
-app.use('/nanas', express.static(path.join(__dirname, './build'))));
-app.use('/nana', express.static(path.join(__dirname, './build'))));
-app.use('/user', express.static(path.join(__dirname, './build'))));
-app.use('/nana/:id', express.static(path.join(__dirname, './build'))));
-app.use('/user/:id', express.static(path.join(__dirname, './build'))));
-app.use('/schedule', express.static(path.join(__dirname, './build'))));
+app.use('/login', express.static(path.join(__dirname, './build')));
+app.use('/nanas', express.static(path.join(__dirname, './build')));
+app.use('/nana', express.static(path.join(__dirname, './build')));
+app.use('/user', express.static(path.join(__dirname, './build')));
+app.use('/nana/:id', express.static(path.join(__dirname, './build')));
+app.use('/user/:id', express.static(path.join(__dirname, './build')));
+app.use('/schedule', express.static(path.join(__dirname, './build')));
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
