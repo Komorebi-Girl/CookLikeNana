@@ -37,6 +37,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use('/user/:id', express.static(path.join(__dirname, './build/')));
   app.use('/schedule', express.static(path.join(__dirname, './build/')));
   }
+  
 app.use(routes);
 
 
