@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const routes = require("./routes");
 const app = express();
+const path = require('path');
 const morgan = require("morgan");
 
 const PORT = process.env.PORT || 8080;
