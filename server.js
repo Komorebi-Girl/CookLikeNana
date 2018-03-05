@@ -18,6 +18,9 @@ app.use(bodyParser.json());
 // Readying app for production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, './build')));
+  app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
   app.use('/login', express.static(path.join(__dirname, './build')));
   app.use('/nanas', express.static(path.join(__dirname, './build')));
   app.use('/nana', express.static(path.join(__dirname, './build')));

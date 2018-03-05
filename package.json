@@ -55,6 +55,5 @@
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
   },
-  "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme",
-  "proxy": "http://localhost:8080"
+  "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme"
 }
