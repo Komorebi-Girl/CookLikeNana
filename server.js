@@ -20,11 +20,25 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/test',(req,res) => {
-  if (req.user) return res.send({Hi:"There"});
-  res.send({message: 'You\' not suppose to be here you filthy animal!'})
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, './build', 'index.html'));
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, './build')));
+  app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, './build', 'index.html'));
+  });
+  app.use('/login', express.static(path.join(__dirname, './build')));
+  app.use('/nanas', express.static(path.join(__dirname, './build')));
+  app.use('/nana', express.static(path.join(__dirname, './build')));
+  app.use('/user', express.static(path.join(__dirname, './build')));
+  app.use('/nana/:id', express.static(path.join(__dirname, './build')));
+  app.use('/user/:id', express.static(path.join(__dirname, './build')));
+  app.use('/schedule', express.static(path.join(__dirname, './build')));
+  ;
+ }
 app.use(routes);
 
 
