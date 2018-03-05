@@ -12,8 +12,6 @@ import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
 import PreComponent from "./components/PreComponent";
 
-const baseUrl = process.env.PUBLIC_URL; 
-
 const App = () => {
 
 return (
@@ -22,14 +20,14 @@ return (
     <NavBar />
     <PreComponent />
     <Switch>
-      <Route exact path={baseUrl+"/"} component={LandingPage} />
-      <Route exact path={baseUrl+"/login"} component={LoginPage} />
-      <Route exact path={baseUrl+"/nanas"} component={SearchPage} />
-      <Route exact path={baseUrl+"/nana"} component={NanaRegister} />
-      <Route exact path={baseUrl+"/user"} component={UserRegister} />
-      <Route path={baseUrl+"/nana/:id"} component={NanaProfile} />
-      <Route path={baseUrl+"/user/:id"} component={UserProfile} />
-      <Route path={baseUrl+"/schedule"} component={SchedulePage} />
+      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/login" component={LoginPage} />
+      <Route exact path="/nanas" component={SearchPage} />
+      <Route exact path="/nana" component={NanaRegister} />
+      <Route exact path="/user" component={UserRegister} />
+      <Route path="/nana/:id" component={NanaProfile} />
+      <Route path="/user/:id" component={UserProfile} />
+      <Route path="/schedule" component={SchedulePage} />
       <Route component={NoMatch} />
     </Switch>
    </div>
