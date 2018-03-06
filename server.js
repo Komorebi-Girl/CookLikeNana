@@ -21,8 +21,8 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/static', express.static(path.join(__dirname, './build/static')));
-app.use(express.static(path.join(__dirname, './build/static')));
+app.use('/', express.static(path.join(__dirname, './build/static')));
+// app.use(express.static(path.join(__dirname, './build/static')));
 
 
 if (process.env.NODE_ENV =='production') {
