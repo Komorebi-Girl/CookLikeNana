@@ -22,6 +22,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/static', express.static(path.join(__dirname, './build/static')));
+app.use('/login', express.static(path.join(__dirname, './build/static')));
+
 
 if (process.env.NODE_ENV =='production') {
   app.use('/static', express.static(path.join(__dirname, './build/static')));
