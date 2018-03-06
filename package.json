@@ -51,14 +51,13 @@
     "url": "git+https://github.com/Komorebi-Girl/CookWithNana.git"
   },
   "engines": {
-    "node": "8.9.1",
-    "npm": "5.5.1"
-  },
+    "node": "8.9.4"
+  }
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
   },
-  "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme",
+  "homepage": "https://peaceful-woodland-77310.herokuapp.com",
   "proxy": "http://localhost:8080"
 }
