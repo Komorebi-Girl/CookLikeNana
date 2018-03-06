@@ -52,8 +52,8 @@
   },
   "engines": {
     "node": "8.9.4"
-  }
-  "author": "",
+  },
+  "author": "Stacy JP",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
