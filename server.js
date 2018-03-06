@@ -21,8 +21,8 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use('/static', express.static(path.join(__dirname, 'build')));
-app.use('https://peaceful-woodland-77310.herokuapp.com/static', express.static(path.join(__dirname, 'build')));
+app.use('/static', express.static(path.join(__dirname, 'build')));
+// app.use('https://peaceful-woodland-77310.herokuapp.com/static', express.static(path.join(__dirname, 'build')));
 
 
 if (process.env.NODE_ENV =='production') {
