@@ -17,20 +17,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Readying app for production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, './build')));
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
-  app.use('/login', express.static(path.join(__dirname, './build')));
-  app.use('/nanas', express.static(path.join(__dirname, './build')));
-  app.use('/nana', express.static(path.join(__dirname, './build')));
-  app.use('/user', express.static(path.join(__dirname, './build')));
-  app.use('/nana/:id', express.static(path.join(__dirname, './build')));
-  app.use('/user/:id', express.static(path.join(__dirname, './build')));
-  app.use('/schedule', express.static(path.join(__dirname, './build')));
-  ;
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, './build')));
+//   app.get('/', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+//   });
+//   app.use('/login', express.static(path.join(__dirname, './build')));
+//   app.use('/nanas', express.static(path.join(__dirname, './build')));
+//   app.use('/nana', express.static(path.join(__dirname, './build')));
+//   app.use('/user', express.static(path.join(__dirname, './build')));
+//   app.use('/nana/:id', express.static(path.join(__dirname, './build')));
+//   app.use('/user/:id', express.static(path.join(__dirname, './build')));
+//   app.use('/schedule', express.static(path.join(__dirname, './build')));
+//   ;
+// }
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
@@ -45,22 +45,6 @@ app.use('/login', express.static(path.join(__dirname, 'build/static')));
 app.get('/login', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
   });  
-
-
-if (process.env.NODE_ENV =='production') {
-  // app.use('/static', express.static(path.join(__dirname, './build/static')));
-  // app.use(express.static(path.join(__dirname, './build/')));
-  //   app.get('/', function (req, res) {
-  //     res.sendFile(path.join(__dirname, './build/', 'index.html'));
-  //   });
-  // app.use('/login', express.static(path.join(__dirname, './build/')));
-  // app.use('/nanas', express.static(path.join(__dirname, './build/')));
-  // app.use('/nana', express.static(path.join(__dirname, './build/')));
-  // app.use('/user', express.static(path.join(__dirname, './build/')));
-  // app.use('/nana/:id', express.static(path.join(__dirname, './build/')));
-  // app.use('/user/:id', express.static(path.join(__dirname, './build/')));
-  // app.use('/schedule', express.static(path.join(__dirname, './build/')));
-  }
 
 app.use(routes);
 
