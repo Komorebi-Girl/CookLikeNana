@@ -62,10 +62,5 @@
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme"
-=======
-  "homepage": "https://peaceful-woodland-77310.herokuapp.com",
-  "proxy": "http://localhost:8080"
->>>>>>> b77a4f93461c40a5b786aa311e37b401c9cf0452
+  "homepage": "https://peaceful-woodland-77310.herokuapp.com"
 }
