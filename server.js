@@ -44,7 +44,17 @@ app.get('/', function (req, res) {
 app.use('/login', express.static(path.join(__dirname, 'build/static')));
 app.get('/login', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
+  });
+  
+app.use('/user/:id', express.static(path.join(__dirname, 'build/static')));
+app.get('/user/:id', function (req, res) {
+    res.sendFile(path.join(__dirname, './build/', 'index.html'));
   });  
+
+app.use('/nana/:id', express.static(path.join(__dirname, 'build/static')));
+app.get('/nana/:id', function (req, res) {
+    res.sendFile(path.join(__dirname, './build/', 'index.html'));
+  });
 
 app.use(routes);
 

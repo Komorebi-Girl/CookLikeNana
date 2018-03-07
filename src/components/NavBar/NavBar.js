@@ -16,7 +16,7 @@ const NavBar = props => (
 	<div id="navContainer">
 <Hamburger />
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<img src="media/logo.550e468a.png" style= {{'max-height': '85px', 'posistion': 'relative', 'padding': '2px'}} alt="Logo" />
+			<img src={logo} style= {{'max-height': '85px', 'posistion': 'relative', 'padding': '2px'}} alt="Logo" />
 
 		<a  style={{'margin-right': "90px"}} href="/login"> | LOGIN</a>
 	  <div className="collapse navbar-collapse" id="navbarSupportedContent">
