@@ -36,6 +36,7 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Serve up the needed static files for each route
 app.use('/', express.static(path.join(__dirname, 'build/static')));
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
