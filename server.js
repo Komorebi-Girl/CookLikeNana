@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const routes = require("./routes");
+const path = require("path");
 const app = express();
 const path = require('path');
 const morgan = require("morgan");
@@ -35,6 +36,26 @@ if (process.env.NODE_ENV === 'production') {
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use('/', express.static(path.join(__dirname, 'build/static')));
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, './build/', 'index.html'));
+  });
+
+if (process.env.NODE_ENV =='production') {
+  // app.use('/static', express.static(path.join(__dirname, './build/static')));
+  // app.use(express.static(path.join(__dirname, './build/')));
+  //   app.get('/', function (req, res) {
+  //     res.sendFile(path.join(__dirname, './build/', 'index.html'));
+  //   });
+  // app.use('/login', express.static(path.join(__dirname, './build/')));
+  // app.use('/nanas', express.static(path.join(__dirname, './build/')));
+  // app.use('/nana', express.static(path.join(__dirname, './build/')));
+  // app.use('/user', express.static(path.join(__dirname, './build/')));
+  // app.use('/nana/:id', express.static(path.join(__dirname, './build/')));
+  // app.use('/user/:id', express.static(path.join(__dirname, './build/')));
+  // app.use('/schedule', express.static(path.join(__dirname, './build/')));
+  }
 
 app.use(routes);
 

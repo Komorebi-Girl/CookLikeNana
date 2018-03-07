@@ -35,7 +35,11 @@
     "yarn": "^1.3.2"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon server.js",
+=======
+    "start": "nodemon server.js", 
+>>>>>>> b77a4f93461c40a5b786aa311e37b401c9cf0452
     "dev": "concurrently \"react-scripts start\" \"nodemon server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -50,10 +54,18 @@
     "type": "git",
     "url": "git+https://github.com/Komorebi-Girl/CookWithNana.git"
   },
-  "author": "",
+  "engines": {
+    "node": "8.9.4"
+  },
+  "author": "Stacy JP",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme"
+=======
+  "homepage": "https://peaceful-woodland-77310.herokuapp.com",
+  "proxy": "http://localhost:8080"
+>>>>>>> b77a4f93461c40a5b786aa311e37b401c9cf0452
 }
