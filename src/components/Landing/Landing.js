@@ -16,7 +16,8 @@ const style = {
       ')',
   top: -8,
   left: 0,
-  zIndex: -0
+  zIndex: -0,
+  margin: '0 auto'
 };
 
 const Landing = props => (
@@ -38,35 +39,32 @@ const Landing = props => (
                 <Grid
                   style={{
                   'background-color': 'transparent',
-                  'color': 'white'
+                  'color': 'white',
+                  'margin': '0, auto'
                 }}>
-                  <Row>
-                    <Col s={12} md={1}></Col>
-                    <Col s={12} md={10}>
+               
 
                       <h1>Welcome to Cook With Nana!</h1>
+                    <div className="intro-p">
                       <h5>
                         Lost college freshmen. Broke Milienials. Stressed out newly weds. When it comes
                         to cooking, a lot of people don't know where to start. That's why we set up Cook
                         With Nana: to help new cooks gain the knowledge to cook like pros, and nothing
                         beats an authentic homemade meal from grandma.
                       </h5>
+                      </div>
                       <br></br>
-                      <form
-                        className="form-inline my-2 my-lg-0"
-                        style={{
-                        'margin-left': "300px"
-                      }}>
-
+                 
+                      <div className="cta">
                         <button
                           className="btn btn-outline-success my-2 my-sm-0"
                           style={{
-                          'background-color': "white"
-                        }}>Browse for Appointments</button>
-                      </form>
-                    </Col>
-                    <Col s={12} md={1}></Col>
-                  </Row>
+                          'background-color': "white",
+                          'margin': '0, auto',
+                          'text-align': 'center'
+                        }}>Browse for Appointments</button>  </div>
+                     
+                   
                 </Grid>
 
               </div>
