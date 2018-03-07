@@ -22,6 +22,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', express.static(path.join(__dirname, 'build/static')));
+app.use('/', express.static(path.join(__dirname, 'build/static/media')));
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
   });
