@@ -25,7 +25,11 @@ app.use('/', express.static(path.join(__dirname, 'build/static')));
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, './build/', 'index.html'));
   });
-app.use('/login', express.static(path.join(__dirname, './build/')));
+app.use('/login', express.static(path.join(__dirname, 'build/static')));
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname, './build/', 'index.html'));
+  });  
+
 
 if (process.env.NODE_ENV =='production') {
   // app.use('/static', express.static(path.join(__dirname, './build/static')));
