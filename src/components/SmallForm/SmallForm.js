@@ -85,8 +85,8 @@ class SmallForm extends Component {
          
         </div>
         <br></br>
-        Don't have an account yet? <a href="/">Sign up as a learner
-        </a> OR <a href="/">Sign up as a Granny
+        Don't have an account yet? <a href="/user">Sign up as a learner
+        </a> OR <a href="/nana">Sign up as a Granny
         </a>
 
       </div>
