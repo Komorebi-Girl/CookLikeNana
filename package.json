@@ -32,7 +32,7 @@
     "sequelize": "^4.33.4",
     "slick-carousel": "^1.8.1",
     "webpack": "^4.0.1",
-    "yarn": "^1.3.2"
+    // "yarn": "^1.3.2"
   },
   "scripts": {
     "start": "nodemon server.js", 
@@ -51,12 +51,13 @@
     "url": "git+https://github.com/Komorebi-Girl/CookWithNana.git"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "8.9.1",
+    "npm": "5.5.1"
   },
-  "author": "Stacy JP",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Komorebi-Girl/CookWithNana/issues"
   },
-  "homepage": "https://peaceful-woodland-77310.herokuapp.com"
+  "homepage": "https://github.com/Komorebi-Girl/CookWithNana#readme"
 }
