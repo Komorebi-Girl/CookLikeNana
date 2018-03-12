@@ -13,7 +13,7 @@ The concept comes from sites like Care.com that match people up with baby sittin
 - Once someone books an appointment with her, it will be reflected on her scheduling page.
 - She can then discuss the logistics with the users that have hired her, such as whether or not she can get transportation, where they will meet up, etc.
 
-### Being a learner
+### Signing up as a student:
 - Users can browse for grandmothers who are available for sessions on their preferred dates in their location.
 - Once the user finds someone who specializes in what they are seeking to learn, they book an appointment which will appear on their "My Schedules" page as well.
 - After this, they can e-mail the grandma to talk through the logistics with her.
