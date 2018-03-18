@@ -1,0 +1,23 @@
+
+.page-footer {
+    padding-top: 10px;
+    color: #fff;
+    background-color: #b985ba;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    min-height: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .footerlink {
+      color: #f5c5b1;
+  }

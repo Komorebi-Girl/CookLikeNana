@@ -1,4 +1,14 @@
+.container{
+	padding: 0px;
+	margin: 0 auto;
+}
+.cta{
+	margin: 0 auto;
 
+}
+.intro-p {
+	max-width: 90%;
+}
 .jumbotron {
 	color:#616985;
 	text-align: center;
@@ -36,8 +46,8 @@ h1{
 }
 
 h5{
-  font-size: 1.6em;
-  text-align: justify;
+  font-size: 1.2em;
+  text-align: center;
 }
 .sectionbod {
 	text-shadow: .5px .5px gray;
@@ -163,3 +173,30 @@ html {
 	font-family: 'Abril Fatface', cursive;
 	font-size: 40px;
 } */
+
+
+@media only screen and (max-width: 812px) {
+	h1{
+		padding-top: 50px;
+		font-family: 'Abril Fatface', cursive;
+		font-size: 2em;
+		margin-bottom: 25px;
+		margin-right: 50px;
+	}
+	intro-p {
+			max-width: 50%;
+			font-size: 1em;
+	}
+	.cta{
+		margin-left: 0px;
+		margin-right: 30px;
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	intro-p {
+			max-width: 20%;
+			font-size: 0.8em;
+	}
+}
