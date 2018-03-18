@@ -44,6 +44,21 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.use("/login", express.static(path.join(__dirname, "build")));
+app.get("/login", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use("/user/:id", express.static(path.join(__dirname, "build")));
+app.get("/user/:id", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use("/nana/:id", express.static(path.join(__dirname, "build")));
+app.get("/nana/:id", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 //   app.use('/', express.static(path.join(__dirname, 'build/static')));
 //   app.get('/', function (req, res) {
 //       res.sendFile(path.join(__dirname, './build/', 'index.html'));
