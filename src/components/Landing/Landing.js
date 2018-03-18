@@ -49,8 +49,8 @@ const Landing = props => (
                       newlyweds. When it comes to cooking, a lot of people don't
                       know where to start. That's why we set up Cook With Nana:
                       to help new cooks develop the knowledge it takes to cook
-                      like pros. At the end of the day, nothing beats a homemade
-                      meal from nana.
+                      like the pros. At the end of the day, nothing beats a
+                      homemade meal from nana.
                     </h5>
                   </div>
                   <br />
