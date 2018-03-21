@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import NoMatch from "./components/NoMatch";
 import NanaProfile from "./components/NanaProfile";
@@ -14,32 +14,28 @@ import Footer from "./components/Footer/Footer";
 import PreComponent from "./components/PreComponent";
 
 const App = () => {
-
-return (
- <Router>
-   <div>
-    <NavBar />
-    <PreComponent />
-    <Switch>
-      <Route exact path="/" component={LandingPage} />
-      <Route exact path="/login" component={LoginPage} />
-      <Route exact path="/nanas" component={SearchPage} />
-      <Route exact path="/nana" component={NanaRegister} />
-      <Route exact path="/user" component={UserRegister} />
-      <Route path="/nana/:id" component={NanaProfile} />
-      <Route path="/user/:id" component={UserProfile} />
-      <Route path="/schedule" component={SchedulePage} />
-      <Route component={NoMatch} />
-   
-
-    </Switch>
-    <Footer />
-   </div>
-   
-</Router>
-);
-}
+  return (
+    <Router>
+      <div>
+        <NavBar />
+        <PreComponent />
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/nanas" component={SearchPage} />
+          <Route exact path="/nana" component={NanaRegister} />
+          <Route exact path="/user" component={UserRegister} />
+          <Route path="/nana/:id" component={NanaProfile} />
+          <Route path="/user/:id" component={UserProfile} />
+          <Route path="/nana/" component={NanaProfile} />
+          <Route path="/user/" component={UserProfile} />
+          <Route path="/schedule" component={SchedulePage} />
+          <Route component={NoMatch} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
-
-
