@@ -43,6 +43,26 @@ app.get("/nana/:id", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.use("/schedule", express.static(path.join(__dirname, "build")));
+app.get("/schedule", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use("/nana", express.static(path.join(__dirname, "build")));
+app.get("/nana", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use("/nanas", express.static(path.join(__dirname, "build")));
+app.get("/nanas", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use("/user", express.static(path.join(__dirname, "build")));
+app.get("/user", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.use(routes);
 
 db.sequelize.sync({ force: false }).then(function() {
