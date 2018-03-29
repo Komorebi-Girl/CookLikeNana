@@ -14,12 +14,13 @@ const NavBar = props => (
   <div id="navContainer">
     <Hamburger />
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <img
-        src={logo}
-        style={{ "max-height": "85px", position: "relative", padding: "2px" }}
-        alt="Logo"
-      />
-      <a href="https://peaceful-woodland-77310.herokuapp.com/" />
+      <a href="https://peaceful-woodland-77310.herokuapp.com/">
+        <img
+          src={logo}
+          style={{ "max-height": "85px", position: "relative", padding: "2px" }}
+          alt="Logo"
+        />
+      </a>
       <a style={{ "margin-right": "90px" }} href="/login">
         {" "}
         | LOGIN
