@@ -16,7 +16,7 @@ const NavBar = props => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a href="https://peaceful-woodland-77310.herokuapp.com/">
         <img
-          src={logo}
+          src="https://peaceful-woodland-77310.herokuapp.com/static/media/logo.550e468a.png"
           style={{ "max-height": "85px", position: "relative", padding: "2px" }}
           alt="Logo"
         />
