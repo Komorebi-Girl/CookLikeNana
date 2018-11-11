@@ -64,7 +64,7 @@ const Landing = props => (
                         "text-align": "center"
                       }}
                     >
-                      Browse for Appointments
+                      <a href="/nanas"> Browse for Appointments </a>
                     </button>{" "}
                   </div>
                 </Grid>
