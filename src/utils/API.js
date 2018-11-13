@@ -1,31 +1,42 @@
 import axios from "axios";
 
 export default {
-  checkLogin: async function(eaddress, pass){
-    return axios.post("/api/login", {email:eaddress, password:pass});
+  checkLogin: async function(eaddress, pass) {
+    return axios.post("/api/login", { email: eaddress, password: pass });
   },
-  grabNanaData: function(){
+  grabNanaData: function() {
     return axios.post("/api/getnanadata");
   },
-  grabUserData: function(){
+  grabUserData: function() {
     return axios.post("/api/getuserdata");
   },
 
-  findTimeSlot: function(day, time){
-    return axios.post("/api/findtimeslot", {availableday:day, availabletime:time})
+  findTimeSlot: function(day, time) {
+    return axios.post("/api/findtimeslot", {
+      availableday: day,
+      availabletime: time
+    });
   },
 
-  createTimeSlot: function(day, time, id){
-    return axios.post("/api/createtimeslot", {nanaid:id, availableday:day, availabletime:time})
+  createTimeSlot: function(day, time, id) {
+    return axios.post("/api/createtimeslot", {
+      nanaid: id,
+      availableday: day,
+      availabletime: time
+    });
   },
 
-  deleteTimeSlot: function(day, time, id){
-    return axios.post("/api/deletetimeslot", {nanaid:id, availableday:day, availabletime:time})
+  deleteTimeSlot: function(day, time, id) {
+    return axios.post("/api/deletetimeslot", {
+      nanaid: id,
+      availableday: day,
+      availabletime: time
+    });
   },
-    
+
   getNanabyID: function(id) {
     return axios.get("/api/nana/" + id);
-  },  
+  },
   getUserbyID: function(id) {
     return axios.get("/api/user/" + id);
   },
@@ -42,7 +53,7 @@ export default {
     return axios.get("/api/bookings/" + id);
   },
   getNanas: function(searchparams) {
-    console.log("Search Parameters");
+    console.log("Search Parameters here");
     console.log(searchparams);
     return axios.post("/api/nanas", searchparams);
   },
@@ -56,5 +67,4 @@ export default {
     console.log(savedata);
     return axios.post("/api/user", savedata);
   }
-}
-
+};
