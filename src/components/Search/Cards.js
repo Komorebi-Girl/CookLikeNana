@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./Cards.css";
 // import { withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
+import history from "../History/history.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -17,9 +18,7 @@ class Cards extends Component {
     event.preventDefault();
     console.log(this);
     console.log("Nana ID is " + nanaid);
-    this.props.router.push({
-      pathname: `/nana/${nanaid}`
-    });
+    history.push(`/nana/${nanaid}`);
   };
 
   render() {

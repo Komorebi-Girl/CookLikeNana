@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+import history from "./components/History/history.js";
 import SearchPage from "./pages/SearchPage";
 import NoMatch from "./components/NoMatch";
 import NanaProfile from "./components/NanaProfile";
@@ -15,7 +16,7 @@ import PreComponent from "./components/PreComponent";
 
 const App = () => {
   return (
-    <Router>
+    <Router history={history}>
       <div>
         <NavBar />
         <PreComponent />
