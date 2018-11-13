@@ -1,4 +1,5 @@
 const express = require("express");
+const listEndpoints = require("express-list-endpoints");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const routes = require("./routes");
@@ -64,6 +65,8 @@ app.get("/user", function(req, res) {
 });
 
 app.use(routes);
+
+console.log(listEndpoints(app));
 
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
